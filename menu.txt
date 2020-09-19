@@ -1,0 +1,2 @@
+Can anyone help me?
+how can make this menu . i know this is sticky but its diffrent .The menu is hidden when I scroll to the bottom. And when I scroll up a little, it becomes a show.
