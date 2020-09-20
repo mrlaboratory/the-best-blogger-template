@@ -35,6 +35,16 @@ $(document).mouseup(function(e){
 
 
   }
+ if(!$('.moremenudiv').is(e.target) && $('.moremenudiv').has(e.target).length === 0 && !$('.moremenu6button').is(e.target) && $('.moremenu6button').has(e.target).length === 0 ){
+   $('.moremenudiv').slideUp();
+ }
+ if(!$('.notifydiv').is(e.target) && $('.notifydiv').has(e.target).length === 0 && !$('.notificationbutton').is(e.target) && $('.notificationbutton').has(e.target).length === 0 ){
+  $('.notifydiv').slideUp();
+}
+if(!$('.reginfoMenu').is(e.target) && $('.reginfoMenu').has(e.target).length === 0 && !$('.regbutton').is(e.target) && $('.regbutton').has(e.target).length === 0 ){
+  $('.reginfoMenu').slideUp();
+}
+
 });
 
 
@@ -98,10 +108,27 @@ htag.innerHTML="Picture "+(i+1)+" is now on display";
 }
 }
 
-
-
-
-
 console.log('%cDeveloped by Md Mijanur Rahaman 😎\n=> https://fb.com/mdmijanurrahaman.mr \n Website : mrlaboratory.com ', 'font:2.5em Roboto;color:#ff0000')
+
+// registration menu jquery
+$('.nav-bar2 .right .regbutton').on('click',function(){
+$('.reginfoMenu').slideToggle();
+$('.moremenudiv').slideUp();
+$('.notifydiv').slideUp();
+
+})
+$('.notificationbutton').on('click',function(){
+  $('.notifydiv').slideToggle();
+  $('.reginfoMenu').slideUp();
+$('.moremenudiv').slideUp();
+  
+  })
+  $('.moremenu6button').on('click',function(){
+    $('.moremenudiv').slideToggle();
+    $('.notifydiv').slideUp();
+    $('.reginfoMenu').slideUp();
+    
+    })
+  
 
 
