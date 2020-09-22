@@ -38,6 +38,14 @@ cursor:pointer;
 background:#2b4ea1;
 color:white;
 padding:10px;
+border:1px solid green;
+
+}
+
+.accbtn:after{
+content:'<';
+position: relative;
+right:0;
 
 }
 .acctext{
@@ -51,44 +59,33 @@ display: none;
 </head>
 <body>
     <div class="accordian">
-<div class="accDiv">
+
     <div class="accbtn">Who are You</div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
-</div>
-<div class="accDiv">
+
     <div class="accbtn">Who are You</div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
-</div>
-<div class="accDiv">
+
     <div class="accbtn">Who are You</div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
-</div>
-<div class="accDiv">
+
     <div class="accbtn">Who are You</div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
-</div>
-<div class="accDiv">
+
+
     <div class="accbtn">Who are You</div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
-</div>
+
 
 
     </div>
   
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script> 
-   var btn = document.querySelectorAll('.accbtn');
-   for(var i = 0;i<btn.length;i++){
-    var bbb = '.accbtn:eq('+i+')';
-    var ttt = '.acctext:eq('+i+')';
-    $(bbb).on('click',function(){
-$(ttt).slideToggle();
+$('.accbtn').on('click',function(){
+$('.acctext:eq('+$(this).index()/2+')').slideToggle();
+
 })
-
-   }
-
-
-
     
         </script>
 </body>
