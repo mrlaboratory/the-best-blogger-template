@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+
+}
+body{
+min-height:100vh;
+display:flex;
+justify-content: center;
+align-items: center;
+background-color:#364975 ;
+color:white;
+
+}
+.accordian{
+width:40%;
+height:auto;
+border:1px solid gray;
+background:white;
+color:black;
+}
+.accDiv{
+width:100%;
+height:auto;
+border:1px solid green;
+
+}
+.accbtn{
+cursor:pointer;
+background:#2b4ea1;
+color:white;
+padding:10px;
+
+}
+.acctext{
+background:#78a4eb;
+padding:10px;
+display: none;
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="accordian">
+<div class="accDiv">
+    <div class="accbtn">Who are You</div>
+    <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
+</div>
+<div class="accDiv">
+    <div class="accbtn">Who are You</div>
+    <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
+</div>
+<div class="accDiv">
+    <div class="accbtn">Who are You</div>
+    <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
+</div>
+<div class="accDiv">
+    <div class="accbtn">Who are You</div>
+    <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
+</div>
+<div class="accDiv">
+    <div class="accbtn">Who are You</div>
+    <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
+</div>
+
+
+    </div>
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script> 
+   var btn = document.querySelectorAll('.accbtn');
+   for(var i = 0;i<btn.length;i++){
+    var bbb = '.accbtn:eq('+i+')';
+    var ttt = '.acctext:eq('+i+')';
+    $(bbb).on('click',function(){
+$(ttt).slideToggle();
+})
+
+   }
+
+
+
+    
+        </script>
+</body>
+</html>
