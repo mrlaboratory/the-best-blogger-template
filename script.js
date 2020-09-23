@@ -6,12 +6,15 @@ window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
   $('.nav-bar1').css('top','0px');
+  $('.sideMenu').css('top','40px');
   if ($(window).width() < 800) {
     $('.nav-bar2').css('top','0px');
+    $('.sideMenu').css('top','0px');
+  
     
       }else{
         $('.nav-bar2').css('top','40px');
-
+        
       }
   
  
@@ -19,6 +22,7 @@ var currentScrollPos = window.pageYOffset;
   } else {
     $('.nav-bar1').css('top','0px');
     $('.nav-bar2').css('top','0px');
+    $('.sideMenu').css('top','0px');
   }
   prevScrollpos = currentScrollPos;
 }

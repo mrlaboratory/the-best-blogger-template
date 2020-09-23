@@ -36,7 +36,7 @@ background:gray;
 }
 .nav-bar2{
     width:100%;
-    height:40px;
+    height:41px;
     background:#3285cf; 
     position:sticky;
     top:0;
@@ -129,23 +129,7 @@ aside{
 
 }
 
-@media screen and (max-width: 800px){
-article{
-    width:100%;
-}
 
-aside{
-    width:100%;
-}
-.nav-bar1{
-display:none;
-
-}
-.sideMenu{
-    top:unset;
-}
-
-}
 .nav-bar2 {
 top:0px;
 
@@ -612,9 +596,13 @@ transition: .5s all;
     background:white;
     color:black;
     padding:10px;
-    border-top:1px solid green;
+    border-top:2px solid #3285cf;
     position: relative;
     font-weight:bold;
+    }
+    .accbtn:last-child{
+    border-bottom:2px solid #3285cf;
+
     }
     
     
@@ -637,3 +625,21 @@ transition: .5s all;
         border-radius: 50%;
         background: white;
     }
+
+    @media screen and (max-width: 800px){
+        article{
+            width:100%;
+        }
+        
+        aside{
+            width:100%;
+        }
+        .nav-bar1{
+        display:none;
+        
+        }
+        .sideMenu{
+            top:unset;
+        }
+        
+        }
