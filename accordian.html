@@ -39,7 +39,7 @@ background:#2b4ea1;
 color:white;
 padding:10px;
 border:1px solid green;
-
+position: relative;
 }
 
 
@@ -49,21 +49,17 @@ padding:10px;
 display: none;
 
 }
-.accarro{
-      width: 0;
-      height: 0;
-      border-top: 50px solid transparent;
-      border-left: 100px solid red;
-      border-bottom: 50px solid transparent;
-   
-}
 
-.accbtn svg{
-
-    width: 80px;
-    height: 14px;
-    color: red;
-    fill: red;
+.accbtn .accsym {
+    position: absolute;
+    right: 6px;
+    font-size: 27px;
+    top: 5px;
+    width: 31px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    background: #2ba1968c;
 }
 
     </style>
@@ -71,32 +67,20 @@ display: none;
 <body>
     <div class="accordian">
 
-    <div class="accbtn">Who are You <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 240.000000 240.000000"
-       preserveAspectRatio="xMidYMid meet">
-      <metadata>
-      Created by potrace 1.16, written by Peter Selinger 2001-2019
-      </metadata>
-      <g transform="translate(0.000000,240.000000) scale(0.100000,-0.100000)"
-      fill="#000000" stroke="none">
-      <path d="M605 2198 l-206 -202 398 -398 398 -398 -398 -398 -398 -398 206
-      -202 206 -202 592 596 c326 328 592 600 592 604 0 4 -266 276 -592 604 l-592
-      596 -206 -202z"/>
-      </g>
-      </svg></span></div>
+    <div class="accbtn">Who are You <p class="accsym">+</p></div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
 
-    <div class="accbtn">Who are You</div>
+    <div class="accbtn">Who are You<p class="accsym">+</p></div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
 
-    <div class="accbtn">Who are You</div>
+    <div class="accbtn">Who are You<p class="accsym">+</p></div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
 
-    <div class="accbtn">Who are You</div>
+    <div class="accbtn">Who are You<p class="accsym">+</p></div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
 
 
-    <div class="accbtn">Who are You</div>
+    <div class="accbtn">Who are You<p class="accsym">+</p></div>
     <div class="acctext">I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman,I am Md Mijanur Rahaman</div>
 
 
@@ -105,8 +89,16 @@ display: none;
   
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script> 
+        var accsym = $('.accbtn .accsym');
 $('.accbtn').on('click',function(){
-$('.acctext:eq('+$(this).index()/2+')').slideToggle();
+    var indexNum = $(this).index()/2;
+$('.acctext:eq('+indexNum+')').slideToggle();
+var inselector = $('.accbtn .accsym:eq('+indexNum+')');
+if (inselector.text() === "+") {
+    inselector.text('-')
+  } else {
+    inselector.text('+')
+  }
 
 })
     
