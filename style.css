@@ -141,6 +141,9 @@ aside{
 display:none;
 
 }
+.sideMenu{
+    top:unset;
+}
 
 }
 .nav-bar2 {
@@ -371,8 +374,8 @@ display:none;
         left: -270px;
         position: fixed;
         z-index: 12;
-        padding: 10px;
-        padding-top: 50px;
+        
+        padding-top: 39px;
         transition: .5s all;
         overflow-x: hidden;
         overflow-y: auto;
@@ -402,7 +405,7 @@ transition: .5s all;
 
         left:0;
     }
-    .sideMenu-btm{
+    /* .sideMenu-btm{
         position: absolute;
         width: 294px;
         bottom: 0;
@@ -415,7 +418,7 @@ transition: .5s all;
         font-size: 15px;
         transition: all .5s;
 
-    }
+    } */
 
 .side-cover {
     background: #3285cf7a;
@@ -590,3 +593,47 @@ transition: .5s all;
     top: 39px;
     color: #1b1919c4;
 }
+
+/* for accordio css  */
+.accordian{
+    width:100%;
+    height:auto;
+
+    background:white;
+    color:black;
+    }
+    .accDiv{
+    width:100%;
+    height:auto;
+    
+    }
+    .accbtn{
+    cursor:pointer;
+    background:white;
+    color:black;
+    padding:10px;
+    border-top:1px solid green;
+    position: relative;
+    font-weight:bold;
+    }
+    
+    
+    .acctext{
+    background:white;
+    padding:10px;
+    display: none;
+    color:black;
+    
+    }
+    
+    .accbtn .accsym {
+        position: absolute;
+        right: 6px;
+        font-size: 27px;
+        top: 10px;
+        width: 31px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 50%;
+        background: white;
+    }

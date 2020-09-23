@@ -132,4 +132,14 @@ $('.moremenudiv').slideUp();
     })
   
 
-
+// accordion
+var accsym = $('.accbtn .accsym');
+$('.accbtn').on('click',function(){
+    var indexNum = $(this).index()/2;
+$('.acctext:eq('+indexNum+')').slideToggle();
+var inselector = $('.accbtn .accsym:eq('+indexNum+')');
+if (inselector.text() === "+") {
+    inselector.text('-')
+  } else {
+    inselector.text('+')
+  } }); 
