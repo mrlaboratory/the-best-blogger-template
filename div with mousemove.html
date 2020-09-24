@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.mover {
+  width: 50px;
+  height: 50px;
+  background: red;
+  position: absolute;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="mover"></div>
+<script>
+
+let root = document.documentElement;
+
+root.addEventListener("mousemove", e => {
+  root.style.setProperty('--mouse-x', e.clientX + "px");
+  root.style.setProperty('--mouse-y', e.clientY + "px");
+});
+
+
+</script>
+</body>
+</html>
