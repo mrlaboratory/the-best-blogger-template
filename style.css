@@ -61,7 +61,7 @@ margin-right:30px;
     
     }
 
-.nav-bar2 img{
+.regbutton img {
 width:30px;
 height:30px;
 border-radius:50%;
@@ -356,8 +356,7 @@ display:none;
         top: 40px;
         left: -270px;
         position: fixed;
-        z-index: 12;
-        
+        z-index: 12;        
         padding-top: 39px;
         transition: .5s all;
         overflow-x: hidden;
@@ -508,8 +507,13 @@ transition: .5s all;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.4);
     border-radius: 0 0 4px 4px;
     display: none;
+    transition: .5s all;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-  }              
+  }         
+  .notifydiv::-webkit-scrollbar {
+    display: none;}     
 
 
   .moremenu6button{
@@ -535,6 +539,7 @@ transition: .5s all;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.4);
     border-radius: 0 0 4px 4px;
     display:none;
+    z-index: 12;
 }
 .topBar {
     width: 37px;
@@ -551,15 +556,15 @@ transition: .5s all;
     height: 79px;
     background: #bbaeae4a;
     color: black;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Rokkitt', serif;
 }
 .userinfo .userImg {
     margin: 13px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.4);
-   
+    display: inline-block;
+    box-shadow: 0px 0px 5px #404443a6;
 }
 .userinfo .userName {
     float: right;
@@ -720,4 +725,87 @@ border-top:1px solid #06060614;
         top: 5px;
         padding: 7px;
         color: #3285cf;
+    }
+    .notifydiv .averter{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin: 5px;
+        display: inline-block;
+        box-shadow: 0px 0px 5px #404443a6;
+
+
+    }
+    .notifydiv img{
+        border-radius:50%;
+        width:100%;
+        height:100%;
+    }
+
+    .notifydiv .commenTex{
+        background: #eae4e4;
+    width: 220px;
+    height: 72px;
+    display: inline-block;
+    border-radius: 0 5px 5px 5px;
+    position: absolute;
+    z-index: 11;
+    right: 5px;
+    top: 5px;
+    padding:10px;
+   
+    }
+
+
+    .commenterDetails {
+        position: relative;
+        padding: 5px;
+        width: 100%;
+        height: 85px;
+    }
+    .notifydiv .commenTex:before{
+
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: -1px solid transparent;
+        border-right: 35px solid #eae4e4;
+        border-bottom: 50px solid transparent;
+        content: '';
+        left: -17px;
+        z-index: -11;
+    }
+
+    .commenTex h4 {
+        top: 4px;
+        position: absolute;
+        margin: 0 0 1em 0;
+        overflow: hidden;
+        height: 1.1em;
+        font-weight: bold;
+        color:#3284cd;
+    }
+    .commenTex p {
+        top: 21px;
+        position: absolute;
+        margin: 0 0 1em 0;
+        overflow: hidden;
+        line-height: 17px;
+        height: 3.1em;
+        font-family: 'Rokkitt', serif;
+        color:#4c4646;
+    }
+    .useraccount{
+width:100%;
+height:auto;
+
+    }
+    .useraccount ul{
+        list-style-type:none ;
+    }
+    .useraccount li a{
+        width: 100%;
+        background: red;
+        padding: 10px;
+
     }
