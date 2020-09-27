@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typejs</title>
+    <style>
+
+
+body{
+background-image: url(https://i.postimg.cc/9FmspFn3/1.jpg);
+-webkit-background-size:cover;
+background-size:cover;
+background-position: center center;
+background-repeat:no-repeat;
+}
+.box {
+width: 700px;
+margin: 240px auto;
+font-size: 30px;
+font-weight: bold;
+font-family: lato;
+text-align: center;
+}
+.typed {
+color: black;
+}
+.box h2 {
+font-size: 80px;
+color: #fff;
+margin: 0;
+font-family: lato;
+font-weight: 900;
+text-transform: uppercase;
+-webkit-text-stroke: 1px black;
+}
+#example {
+margin: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>
+  Laura Thorn</h2>
+  <h1 id="example">
+  </h1></div>
+  <script>
+
+
+$("#example").typer({
+strings: [
+"I'm a Model",
+"I'm a Designer",
+"I'm a Photographer"
+],
+typeSpeed: 200,
+backspaceSpeed: 20,
+backspaceDelay: 800,
+repeatDelay: 1000,
+repeat: true,
+autoStart: true,
+startDelay: 100,
+});
+
+  </script>
+    
+</body>
+</html>
