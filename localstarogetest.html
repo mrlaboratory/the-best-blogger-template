@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input id="mr" type="checkbox" />
+
+    <script>
+
+
+var checkBox = document.getElementById('mr');
+
+var theme = window.localStorage.getItem('data-theme');
+if(theme) document.documentElement.setAttribute('data-theme', theme);
+checkBox.checked = theme == 'dark' ? true : false;
+
+checkBox.addEventListener('change', function () {
+  if(this.checked){
+    document.documentElement.setAttribute('data-theme', 'dark');
+    window.localStorage.setItem('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    window.localStorage.setItem('data-theme', 'light');
+  }
+});
+    </script>
+</body>
+</html>
