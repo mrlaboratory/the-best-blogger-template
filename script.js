@@ -147,3 +147,52 @@ if (inselector.text() === "+") {
   } else {
     inselector.text('+')
   } }); 
+
+
+
+  
+var darkMode = document.querySelectorAll('.buttoninput')[0];
+var gridMode = document.querySelectorAll('.buttoninput')[1];
+var customMode = document.querySelectorAll('.buttoninput')[2];
+var traMode = document.querySelectorAll('.buttoninput')[3];
+var graMode = document.querySelectorAll('.buttoninput')[4];
+var theme = window.localStorage.getItem('data-theme');
+
+// darkmode
+  if(theme) document.documentElement.setAttribute('data-theme', theme);
+  darkMode.checked = theme == 'dark' ? true : false;
+  darkMode.addEventListener('change', function () {
+  if(this.checked){
+    document.documentElement.setAttribute('data-theme', 'dark');
+    window.localStorage.setItem('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    window.localStorage.setItem('data-theme', 'light');
+
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
