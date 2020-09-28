@@ -1033,7 +1033,7 @@ display: table;
 .footerMidle{
 width:100%;
 height:200px;
-background: slategrey;
+background:var(--bgcolor);
 
 
 }
@@ -1041,7 +1041,7 @@ background: slategrey;
     float:left;
     width: 50%;
     height:100%;
-    /* background:red; */
+    
   
    
 
@@ -1063,19 +1063,17 @@ overflow-x: hidden;
 .footerMidle .linklist ul li a{
    display: block;
    padding:10px;
-   background:black;
-   color:white;
+   background:var(--bgcolor);
+  
+   color:var(--blackwhite);
   
    text-decoration: none;
-   border:1px solid red;
+   margin:2px;
  
  
     
     }
-    .footerMidle .linklist ul li a:last-child{
-        border-bottom:1px solid red;
-    }
-    
+   
     .footerMidle .linklist .Author li a:after{
         text-decoration: none;
         font-family: "Font Awesome 5 Free"; 
