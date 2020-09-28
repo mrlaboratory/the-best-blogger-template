@@ -147,10 +147,6 @@ if (inselector.text() === "+") {
   } else {
     inselector.text('+')
   } }); 
-
-
-
-  
 var darkMode = document.querySelectorAll('.buttoninput')[0];
 var gridMode = document.querySelectorAll('.buttoninput')[1];
 var customMode = document.querySelectorAll('.buttoninput')[2];
