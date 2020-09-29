@@ -1,6 +1,6 @@
 About This project
 -----------------------------------
-This is template design . blogger and wordpres template make can by this template.
+This is template design . blogger and wordpres template can make by this template.
 this template have more fuature. like animation menu width Jquery.
 
 
