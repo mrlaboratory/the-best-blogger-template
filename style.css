@@ -994,9 +994,9 @@ color:white;
 footer{
     width:100%;
     height:auto;
-    background:var(--main-sbgcolor);
+    background:var(--bgcolor);
     padding:0px;
-  
+    border-top:1px dotted red;
     color:white;
     
     }
@@ -1004,7 +1004,7 @@ footer{
 .footerBottom{
 width: 100%;
 height: 50px;
-background: rgba(0,0,0,0.4);
+
 
 }
 .footerTop{
@@ -1014,26 +1014,31 @@ display: table;
 
 }
 .footerTop .left{
-    width:50%;
-    height:auto;
+width:50%;
+height:auto;
 float:left;
-
-padding: 10px;
+color: var(--blackwhite);
+padding: 15px;
 display: table;
+
 }
+
+
+
 .footerTop .right{
     width:50%;
     height:auto;
     float:left;
-    
+    text-align: center;
     padding: 10px;
     display: table;
+
 }
 
 .footerMidle{
 width:100%;
 height:200px;
-background:var(--bgcolor);
+
 
 
 }
@@ -1041,6 +1046,7 @@ background:var(--bgcolor);
     float:left;
     width: 50%;
     height:100%;
+
     
   
    
@@ -1063,10 +1069,8 @@ overflow-x: hidden;
 .footerMidle .linklist ul li a{
    display: block;
    padding:10px;
-   background:var(--bgcolor);
-  
+   background: var(--whiteblack);
    color:var(--blackwhite);
-  
    text-decoration: none;
    margin:2px;
  
@@ -1086,7 +1090,7 @@ overflow-x: hidden;
 .footerMidle .linklist h3{
 text-align: center;
 padding:5px;
-
+color: var(--blackwhite);
 }
 
 
@@ -1232,4 +1236,18 @@ padding:5px;
 
 
     
+    }
+    .footerBottom .credit {
+text-align: center;
+
+    }
+    .footerBottom .credit p{
+padding:10px;
+font-weight: bold;
+color: var(--blackwhite);
+
+    }
+    .footerBottom .credit a{
+text-decoration: none;
+color: var(--blackwhite);
     }
