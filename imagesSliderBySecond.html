@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Images Slider</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
     <style>
 *{
 padding:0;
@@ -29,6 +31,7 @@ position: relative;
 .img-div img{
 width:100%;
 height:100%;
+border-radius: 5px;
 
 
 
@@ -38,7 +41,10 @@ position: absolute;
 width:40px;
 height:40px;
 background: red;
-
+cursor: pointer;
+font-size: 30px;
+font-weight: bold;
+color: white;
 
 }
 .slideButton1{
@@ -57,8 +63,8 @@ top:50%;
 <body>
     <div class="img-div">
         <img src="img/1.png"">
-        <div onclick="prev()" class="slideButton1 button"></div>
-        <div onclick="next()" class="slideButton2 button"></div>
+        <div onclick="prev()" class="slideButton1 button"><i class="fas fa-arrow-left"></i></div>
+        <div onclick="next()" class="slideButton2 button"><i class="fas fa-arrow-right"></i></div>
     </div>
 
 
