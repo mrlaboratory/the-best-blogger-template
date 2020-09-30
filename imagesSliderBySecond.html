@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Slider</title>
+    <style>
+*{
+padding:0;
+margin: 0;
+box-sizing: border-box;
+
+}
+body{
+background: #64778f;
+justify-content: center;
+align-items: center;
+display: flex;
+min-height: 100vh;
+
+}
+.img-div{
+width:400px;
+height:250px;
+position: relative;
+
+}
+
+.img-div img{
+width:100%;
+height:100%;
+
+
+
+}
+.button{
+position: absolute;
+width:40px;
+height:40px;
+background: red;
+
+
+}
+.slideButton1{
+left:0;
+top:50%;
+
+}
+.slideButton2{
+right:0;
+top:50%;
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="img-div">
+        <img src="img/1.png"">
+        <div onclick="prev()" class="slideButton1 button"></div>
+        <div onclick="next()" class="slideButton2 button"></div>
+    </div>
+
+
+    <script>
+
+var photos = ["img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/6.png","img/7.png","img/8.png"];
+var imgtag = document.querySelector(".img-div img");
+var htag = document.querySelector(".img-div h2");
+
+var i = 0;
+
+function next(){
+i++;
+if(i>photos.length-1){
+i = 0;
+imgtag.src=photos[i];
+var text = this.innerHTML;
+
+htag.innerHTML="Picture "+(i+1)+" is now on display";
+}
+else{
+imgtag.src=photos[i];
+var text = this.innerHTML;
+htag.innerHTML="Picture "+(i+1)+" is now on display";
+}
+}
+/*  
+Hey Dear, I'm Md Mijanur Rahaman, 
+Founder & CEO of MR Laboratory.
+I have 2 years experience of Blogger template Development. I have enough ideas about HTML CSS and JavaScript to develop blogger theme. Inshaallah I will do better things for you. I can solve Blogger's problem. If you have any problem you can let me know, I will try my best to solve your problem.
+Hire me for your work.
+Email: admin@mrlaboratory.com
+Fb: fb.com/mdmijanurrahaman.mr
+Phone No: 01854650673
+
+*/
+function prev(){
+i--;
+if(i<0){
+i = photos.length-1;
+imgtag.src=photos[i];
+htag.innerHTML="Picture "+(i+1)+" is now on display";
+}
+else{
+imgtag.src=photos[i];
+htag.innerHTML="Picture "+(i+1)+" is now on display";
+
+
+
+}
+}
+    </script>
+</body>
+</html>
