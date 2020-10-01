@@ -26,15 +26,20 @@ var currentScrollPos = window.pageYOffset;
   }
   prevScrollpos = currentScrollPos;
 }
+var btn = $(".circle");
+  var abtn =$(".togglebutton");
 
 $(document).mouseup(function(e){
   var container = $(".sideMenu");
-  var btn = $(".circle");
+  
   // If the target of the click isn't the container
   if(!container.is(e.target) && container.has(e.target).length === 0 && !btn.is(e.target) && btn.has(e.target).length === 0 ){
       container.removeClass('menuRight');
       btn.removeClass('close');
+      abtn.removeClass('activbtn');
       $('.side-cover').removeClass('cover');
+
+      
 
 
 
@@ -60,6 +65,7 @@ if(!$('.reginfoMenu').is(e.target) && $('.reginfoMenu').has(e.target).length ===
 
   function mijanSideMenu(){
     $('.circle').toggleClass('close');
+    $('.togglebutton').toggleClass('activbtn');
     $('.sideMenu').toggleClass('menuRight');
     $('.side-cover').toggleClass('cover');
     }
