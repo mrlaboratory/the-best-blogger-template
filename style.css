@@ -25,6 +25,7 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --greyDark: #9baacf;
   /* new */
     --bgcolor:#ebecf0;
+    --bgcolor2:#ebecf0;
     --shadow1: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
     --shadow1hover : inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
     --fade:linear-gradient(to right, rgba(255, 255, 255, 0), var(--bgcolor) 50%);
@@ -41,7 +42,7 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --blackwhiteshadow: #c1c5c7;
     --lowwhiteblack:#3285cf3b;
     --bgcolorwhite:#3285cf;
-    --Obgcolor:#eae4e4;
+    --Obgcolor:#cbcfe2;
     
     --hover:rgb(230,230,230);
   
@@ -67,7 +68,8 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --hover: rgb(43 43 43);
 
     /* new */
-    --bgcolor:#000000d4;
+    --bgcolor:#2b2b2b;
+    --bgcolor2:#2b2b2b;
     --shadow1:-2px -2px 6px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
     --shadow1hover : inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
     --fade:linear-gradient(to right, rgba(255, 255, 255, 0), #2b2b2be0 100%);
@@ -95,7 +97,7 @@ height:auto;
 .nav-bar1{
     width:100%;
     height:40px;
-    background:var(--bgcolor); 
+    background:var(--bgcolor2); 
     text-align:center;
     z-index: 99;
     position: sticky;
@@ -240,12 +242,13 @@ margin:20px;
 padding:5px;
 border-radius:5px;
 height:150px;
-box-shadow: var(--shadow1hover);
-
-overflow: hidden;}
+box-shadow: var(--shadow1);
+overflow: hidden;
+transition:all .5s;
+}
 .post:hover{
-    box-shadow: var(--shadow1);
-    transition:all .5s;
+    box-shadow: var(--shadow1hover);
+    
 }
 
 
@@ -981,7 +984,7 @@ list-style-type: none;
     border:none;
     padding:5px;
     transition: .5s;
-    background: transparent;
+   background: transparent;
     border-bottom:2px solid transparent;
     box-shadow: var(--shadow1hover);
     border-radius: 10px;
@@ -1124,7 +1127,7 @@ color: var(--blackwhite);
 
 
 /* fa icon design */
-.footerTop .right .fa {
+.footerTop .right .fa,.footerTop .right .fab {
     padding: 10px;
     border-radius: 50%;
     font-size: 30px;
@@ -1135,7 +1138,7 @@ color: var(--blackwhite);
     margin: 10px 10px;
     box-shadow: var(--shadow1);
   }
-  .footerTop .right .fa:hover {
+  .footerTop .right .fa:hover,.footerTop .right .fab:hover {
 
    box-shadow: var(--shadow1hover);
 }
@@ -1197,15 +1200,32 @@ display:flex;
 
     .centerDiv{
 width:500px;
-height:250px;
+height:300px;
 margin: 0 auto;
 /* box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8); */
 box-shadow: var(--shadow1);
 position: relative;
 border-radius: 10px;
 
+    }
+    .centerDiv h3{
+        text-align: center;
+        font-size: 35px;
+        color:var(--blackwhite);
 
     }
+    .centerDiv p{
+margin:0 auto;
+padding:10px;
+color:var(--blackwhite);
+
+    }
+
+    .centerDiv a{
+      
+        color:var(--blackwhite);
+        
+            }
     .centerDiv .loader{
         width: 100px;
         height: 100px;
@@ -1245,4 +1265,39 @@ border-radius: 10px;
     z-index: 16;
     position: absolute;
 }
+
+
+
+/* .errorcover .errorbox{
+    width: 400px;
+    height: 300px;
+    background: #3328d4;
+    z-index: 999999999;
+    position: absolute;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 8px #0606069c;
+    color: white;
+    padding: 10px;
+    line-height: 25px;
+    font-size: 17px;
+}  */
+.errorcover .errorbox a{
+    color:white;
+}
+.errorcover .errorbox h1{
+    margin-bottom: 20px;
+    color:red;
+}
+.errorcover .errorbox button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 40px;
+cursor: pointer;
+background: transparent;
+outline: none;
+color: white;
+border-radius: 0 0 10px 0;
 }
