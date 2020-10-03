@@ -10,15 +10,9 @@ var currentScrollPos = window.pageYOffset;
   if ($(window).width() < 800) {
     $('.nav-bar2').css('top','0px');
     $('.sideMenu').css('top','0px');
-  
-    
       }else{
-        $('.nav-bar2').css('top','40px');
-        
+        $('.nav-bar2').css('top','40px');     
       }
-  
- 
-
   } else {
     $('.nav-bar1').css('top','0px');
     $('.nav-bar2').css('top','0px');
@@ -132,16 +126,12 @@ $('.notificationbutton').on('click',function(){
   $('.notifydiv').slideToggle();
   $('.reginfoMenu').slideUp();
 $('.moremenudiv').slideUp();
-  
   })
   $('.moremenu6button').on('click',function(){
     $('.moremenudiv').slideToggle();
     $('.notifydiv').slideUp();
     $('.reginfoMenu').slideUp();
-    
     })
-  
-
 // accordion
 var accsym = $('.accbtn .accsym');
 $('.accbtn').on('click',function(){
@@ -174,23 +164,120 @@ var theme = window.localStorage.getItem('data-theme');
   }
 });
 
+// error box when removed developers credit
+var allText ='<div class="errorbox"><h1>warning !!!</h1><p>This box shows you a warning if you have removed a developer credit. Because the developer credit must be in this template if you want to use the free version</p> <a href="https://www.facebook.com/mrlaboratory">Contact us</a> to buy premium version of this template.</p><p>Email : admin@mrlaboratory.com</p><p>Email : mrlaboratory23@gmail.com</p><p>Phone Number : +8801854650673</p><p>Facebook : fb.com/mrlaboratory</p><p>Thank You ...</p><button onclick="errorRemove()">OK</button>';
+var errorC = document.createElement("div");
+document.body.appendChild(errorC);
+errorC.classList.add('errorcover');
+errorC.innerHTML=allText;
+errorC.style.cssText = 'width: 100%; height: 100%; background: #3328d452; position: fixed; z-index: 99999999; top: 0; min-height: 100vh; display: none; align-items: center; justify-content: center;';
+var errbx = $('.errorbox');
+errbx.css({ "width": "400px" ,"height": "300px" ,"background": "#3328d4" ,"z-index": "999999999" ,"position": "absolute" ,"border-radius": "10px" ,"text-align": "center" ,"box-shadow": "2px 2px 8px #0606069c" ,"color": "white" ,"padding": "10px" ,"line-height": "25px" ,"font-size": "17px" });
+var erorremov = $('.errorcover');
+function errorRemove(){
+  erorremov.css('display','none');
+} window.onload = function(){
+  if(document.querySelector(".copyrightMR") == null){
+    erorremov.css('display','flex');
+}else{
+var cr = document.querySelector('.copyrightMR');
+cr.innerHTML="<a href='https://www.mrlaboratory.com'> Theme Created By MR Laboratory</a>";
+
+  }
+};
+
+
+// Redirector
+var redirectPage ="https://www.mrlaboratory.com/p/redirect.html?url=";
+var redirectRef = "?ref=https://www.mrlaboratory.com/";
+var redirectLength = document.querySelectorAll(".redirect").length;
+for(var i=0;i<redirectLength;i++){
+var redirectselector = document.querySelectorAll(".redirect")[i];
+var redirectURL = document.querySelectorAll(".redirect")[i].href;
+modifyRedirectURL =redirectPage+redirectURL+redirectRef;
+redirectselector.href=modifyRedirectURL;
+redirectselector.target="_blank";
+redirectselector.title="MR Laboratory to "+redirectURL;}
 
 
 
+// word linker 
+var text1 = [
+  'mr laboratory',
+'MR Laboratory',
+  'Md Mijanur Rahaman',  
+  'facebook',
+'Facebook',
+'Youtube',
+'youtube',
+'twitter',
+'Twitter',
+'search',
+'Search',
+'blogger tricks',
+'blogger tutorial',
+'hacking',
+'seo tutorial',
+'seo tricks',
+'online earning',
+'freelancing',
+'outsourcing',
+'computer tricks',
+'video marketing',
+'web development',
+'digital marketing',
+'email marketing',
+'affiliate marketing',
+'motivational',
+'video editing',
+'photo editing'
+
+  ];
+  var liNK1 = [
+  'https://mrlaboratory.info',
+'https://mrlaboratory.com',
+  'https://admin.mrlaboratory.info',
+  'https://facebook.com/mrlaboratory',
+'https://facebook.com/mrlaboratory',
+'https://www.youtube.com/channel/UC8uhhaqA9s540gufCwKwrKA',
+'https://www.youtube.com/channel/UC8uhhaqA9s540gufCwKwrKA',
+'https://twitter.com/mrlaboratory2',
+'https://twitter.com/mrlaboratory2',
+'https://www.google.com/search?q=mr+laboratory',
+'https://www.google.com/search?q=mr+laboratory',
+'https://www.mrlaboratory.info/p/blogger-tutorial.html',
+'https://www.mrlaboratory.info/p/blogger-tutorial.html',
+'https://www.mrlaboratory.info/p/ethical-hacking.html',
+'https://www.mrlaboratory.info/p/seo-tutorial.html',
+'https://www.mrlaboratory.info/p/seo-tutorial.html',
+'https://www.mrlaboratory.info/p/online-earning.html',
+'https://www.mrlaboratory.info/p/online-earning.html',
+'https://www.mrlaboratory.info/p/online-earning.html',
+'https://www.mrlaboratory.info/p/computer-tricks.html',
+'https://www.mrlaboratory.info/p/youtube-marketing.html',
+'https://www.mrlaboratory.info/p/web-developing.html',
+'https://www.mrlaboratory.info/p/digital-marketing.html',
+'https://www.mrlaboratory.info/search?q=email+marketing',
+'https://www.mrlaboratory.info/search?q=affiliate+marketing',
+'https://www.mrlaboratory.info/p/motivational-speech.html',
+'https://www.mrlaboratory.info/p/video-editing.html',
+'https://www.mrlaboratory.info/p/photo-editing.html'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+  ];
+  for (var i=0; i<text1.length;i++){
+var liNK = liNK1[i];
+var y = text1[i];
+  highlight(y);
+      function highlight(text) {
+          html = document.querySelector(".post-body").innerHTML;
+  
+          re = new RegExp(text, 'g');
+          if (re.test(html)) {
+              html = html.replace(re, '<a class="word-linking-mr"  target="_blank" href='+liNK+'>' + text + '</a> ');    
+          }  
+          document.querySelector(".post-body").innerHTML = html;    
+      }    }
 
 
 
