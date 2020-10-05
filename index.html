@@ -33,7 +33,7 @@
                 <li><a href="#"><i class="fa fa-lock"></i> Policy</a></li>
                 <li><a href="#"><i class="fa fa-sitemap"></i> Sitemap</a></li>
                 <li><a href="#"><i class="fa fa-search"></i> Search</a></li>
-                <li><a href="#"><i class="fa fa-fire"></i> Tranding</a></li>
+                <li><a href="#"><i class="fa fa-fire"></i> Trending</a></li>
                 
                 
             </ul>
@@ -541,11 +541,43 @@
            
   </article>
    <aside>
-    <div class="img-div">
-        <img src="img/1.png"">
-        <div onclick="prev()" class="slideButton1 button"></div>
-        <div onclick="next()" class="slideButton2 button"></div>
-        </div>
+
+<div class="sidebox">
+   <h2>Trending</h2><hr>
+   
+    <div class="post2">
+<div class="left"><img src="tech/1.png" alt="Technology"></div>
+<h5>Technology gadget,</h5>
+   </div>
+   <div class="post2">
+      <div class="left"><img src="tech/2.png" alt="Technology"></div>
+      <h5>Technology gadget,</h5>
+         </div>
+
+         <div class="post2">
+            <div class="left"><img src="tech/3.png" alt="Technology"></div>
+            <h5>Technology gadget,</h5>
+               </div>
+               <div class="post2">
+                  <div class="left"><img src="tech/4.png" alt="Technology"></div>
+                  <h5>Technology gadget,</h5>
+                     </div>
+</div>
+
+
+
+
+
+<div class="sidebox">
+   <h2>Images Slider</h2><hr>
+ 
+   <div class="img-div">
+      <img src="img/1.png"">
+      <div onclick="prev()" class="slideButton1 button"></div>
+      <div onclick="next()" class="slideButton2 button"></div>
+ </div>
+</div>
+  
 
 
     
@@ -595,7 +627,7 @@
 <p>    Welcome to our website <a href='/'>MR Laboratory</a>. We Have <b style='color:red;'><span>41</span></b> Authors to write an article.
 We are regularly sharing some best content.
 All kind of Internet Technology tricks are shared on our website. 
-We have <b style='color:red;'><span>1505</span></b> articles and <b style='color:red;'><span>1000+</span></b> comments. More than <b style='color:red;'><span>41</span></b> people visit our website regularly.
+We have <b style='color:red;'><span>1505</span></b> articles and <b style='color:red;'><span>1000+</span></b> comments. More than <b style='color:red;'><span>2100+</span></b> people visit our website regularly.
 Read more <a href='/p/about.html'>About MR Laboratory. </a>
 
 You can also write to our website if you wish. 
@@ -603,15 +635,25 @@ You can also write to our website if you wish.
    Join Our Community for writing on our website . </p>
 
 
+   <button class="contact">Contact</button>
+   <button class="about">About</button>
+  
  </div>
 
+ <div class="windowbox contactdiv">
+<button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
 
+ </div>
+ <div class="windowbox aboutdiv">
+   <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+ </div>
 </div>
 
 <div class="footerMidle">
 <div class="linklist">
-   <h3>Author List</h3>
-   <ul class="Author">
+   <h3>Author List <i class="fa fa-book" aria-hidden="true"></i></h3>
+   <ol class="Author">
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
@@ -621,11 +663,11 @@ You can also write to our website if you wish.
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
 
-   </ul>
+   </ol>
 </div>
 <div class="linklist">
-   <h3>Member List</h3>
-   <ul class="Member">     
+   <h3>Member List <i class="fa fa-book" aria-hidden="true"></i></h3>
+   <ol class="Member">     
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
@@ -638,7 +680,7 @@ You can also write to our website if you wish.
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
       <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
-   </ul>
+   </ol>
 
 
 </div>
@@ -669,10 +711,19 @@ You can also write to our website if you wish.
 
 
    </div> 
+   <div class="draggableDiv ui-widget-content" >
+      <img src="images/logo.png" alt="">
+   </div>
+
+<button class="scrollBtn" onclick="topFunction()"><i class="fas fa-arrow-up"></i></button>
+
    <script>
       var webUrl ='https://www.mrlaboratory.com';
    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+
     <script src="script.js"></script>
 <!-- <script src="encripted.js"></script> -->
 
