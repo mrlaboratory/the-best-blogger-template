@@ -3,6 +3,7 @@ $('.togglebutton').on('click',mijanSideMenu)
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
+scrollFunction();
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
   $('.nav-bar1').css('top','0px');
@@ -200,88 +201,45 @@ redirectselector.target="_blank";
 redirectselector.title="MR Laboratory to "+redirectURL;}
 
 
+      // back to top 
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      var mybutton = document.querySelector('.scrollBtn');
+     function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         mybutton.style.opacity = "100%";
+         mybutton.style.bottom = "40px";
 
-// word linker 
-var text1 = [
-  'mr laboratory',
-'MR Laboratory',
-  'Md Mijanur Rahaman',  
-  'facebook',
-'Facebook',
-'Youtube',
-'youtube',
-'twitter',
-'Twitter',
-'search',
-'Search',
-'blogger tricks',
-'blogger tutorial',
-'hacking',
-'seo tutorial',
-'seo tricks',
-'online earning',
-'freelancing',
-'outsourcing',
-'computer tricks',
-'video marketing',
-'web development',
-'digital marketing',
-'email marketing',
-'affiliate marketing',
-'motivational',
-'video editing',
-'photo editing'
+        } else {
+          mybutton.style.opacity = "0%";
+          mybutton.style.bottom = "-60px";
+        }
+      }
+      var aboutdiv = $('.footerAbout .aboutdiv');
+      var contactdiv = $('.footerAbout .contactdiv');
+      var aboutbtn = $('.footerAbout .about');
+      var contactbtn = $('.footerAbout .contact');
+      var aboutcls = $('.footerAbout .aboutdiv .close');
+      var contactcls = $('.footerAbout .contactdiv .close');
+      
+   
+      aboutbtn.on('click',function(){
+        aboutdiv.slideToggle();
+     
+        });
+        contactbtn.on('click',function(){
+        contactdiv.slideToggle();
+     
+        });
+        aboutcls.on('click',function(){
 
-  ];
-  var liNK1 = [
-  'https://mrlaboratory.info',
-'https://mrlaboratory.com',
-  'https://admin.mrlaboratory.info',
-  'https://facebook.com/mrlaboratory',
-'https://facebook.com/mrlaboratory',
-'https://www.youtube.com/channel/UC8uhhaqA9s540gufCwKwrKA',
-'https://www.youtube.com/channel/UC8uhhaqA9s540gufCwKwrKA',
-'https://twitter.com/mrlaboratory2',
-'https://twitter.com/mrlaboratory2',
-'https://www.google.com/search?q=mr+laboratory',
-'https://www.google.com/search?q=mr+laboratory',
-'https://www.mrlaboratory.info/p/blogger-tutorial.html',
-'https://www.mrlaboratory.info/p/blogger-tutorial.html',
-'https://www.mrlaboratory.info/p/ethical-hacking.html',
-'https://www.mrlaboratory.info/p/seo-tutorial.html',
-'https://www.mrlaboratory.info/p/seo-tutorial.html',
-'https://www.mrlaboratory.info/p/online-earning.html',
-'https://www.mrlaboratory.info/p/online-earning.html',
-'https://www.mrlaboratory.info/p/online-earning.html',
-'https://www.mrlaboratory.info/p/computer-tricks.html',
-'https://www.mrlaboratory.info/p/youtube-marketing.html',
-'https://www.mrlaboratory.info/p/web-developing.html',
-'https://www.mrlaboratory.info/p/digital-marketing.html',
-'https://www.mrlaboratory.info/search?q=email+marketing',
-'https://www.mrlaboratory.info/search?q=affiliate+marketing',
-'https://www.mrlaboratory.info/p/motivational-speech.html',
-'https://www.mrlaboratory.info/p/video-editing.html',
-'https://www.mrlaboratory.info/p/photo-editing.html'
+          aboutdiv.slideToggle();
+        });
+        contactcls.on('click',function(){
+          contactdiv.slideToggle();
+          
+        });
 
-
-  ];
-  for (var i=0; i<text1.length;i++){
-var liNK = liNK1[i];
-var y = text1[i];
-  highlight(y);
-      function highlight(text) {
-          html = document.querySelector(".post-body").innerHTML;
-  
-          re = new RegExp(text, 'g');
-          if (re.test(html)) {
-              html = html.replace(re, '<a class="word-linking-mr"  target="_blank" href='+liNK+'>' + text + '</a> ');    
-          }  
-          document.querySelector(".post-body").innerHTML = html;    
-      }    }
-
-
-
-
-
-
-
+       
