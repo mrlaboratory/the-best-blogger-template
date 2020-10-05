@@ -5,13 +5,22 @@ box-sizing:border-box;
 
 
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+  
 body{
 height:100vh;
 font-family: 'Hind Siliguri', sans-serif;
 line-height: 19px;
 overflow-x: hidden; /* Hide horizontal scrollbar */
+
+
 }
 
+
+/* background: linear-gradient(30deg,#d367c1 10%,#dedf40 25%,#62cb5c 50%,#00bbcb 75%,#ab79d6 90%); */
 :root {
       /* from another source  */
     --primary-light: #8abdff;
@@ -40,8 +49,8 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --blackwhite:black;
  
     --blackwhiteshadow: #c1c5c7;
-    --lowwhiteblack:#3285cf3b;
-    --bgcolorwhite:#3285cf;
+    --lowwhiteblack:#7e80823b;
+    --bgcolorwhite:#060606;
     --Obgcolor:#cbcfe2;
     
     --hover:rgb(230,230,230);
@@ -200,13 +209,13 @@ display:table;
 
 }
 aside{
-    width:28%;
+    width:27%;
     height:auto;
     margin:10px;
     top:50px;
     position:sticky;
     float:left;
-  width: 25%;
+ 
   height: 25vh;
   display:table;
     
@@ -236,6 +245,19 @@ aside ul li a:hover{
 background:var(--main-sbgcolor);
 
 }
+
+.sidebox{
+    padding:10px;
+    box-shadow: var(--shadow1);
+    width: 97%;
+    height: auto;
+    border-radius:5px;
+    overflow: hidden;
+    transition:all .5s;
+    margin-top: 40px;
+    color:var(--blackwhite);
+}
+
 .post{
 color:var(--blackwhite);
 margin:20px;
@@ -243,8 +265,10 @@ padding:5px;
 border-radius:5px;
 height:150px;
 box-shadow: var(--shadow1);
+border-radius:5px;
 overflow: hidden;
 transition:all .5s;
+
 }
 .post:hover{
     box-shadow: var(--shadow1hover);
@@ -514,6 +538,7 @@ transition: .5s all;
         border-radius:10px;
         box-shadow:.5px .5px 4px #c1c5c7, -.5px -.5px 4px #c1c5c7;
        cursor: pointer;
+       margin: 0 auto;
         }
        
         .img-div img{
@@ -1068,8 +1093,12 @@ display: table;
 }
 
 .footerMidle{
-width:100%;
+width:98%;
 height:200px;
+box-shadow: var(--shadow1);
+margin:10px;
+padding-right:10px;
+
 
 
 
@@ -1078,17 +1107,16 @@ height:200px;
     float:left;
     width: 50%;
     height:100%;
+ 
 
-    
-  
-   
-
-    
 
 }
+.footerMidle .linklist ol::-webkit-scrollbar{
+   width:2px;
+}
 
-.footerMidle .linklist ul{
-list-style-type: none;
+.footerMidle .linklist ol{
+list-style-type:none;
 height:170px;
 width:100%;
 overflow-y: scroll;
@@ -1098,10 +1126,10 @@ overflow-x: hidden;
 
 
 
-.footerMidle .linklist ul li a{
+.footerMidle .linklist ol li a{
    display: block;
    padding:10px;
-   background: var(--whiteblack);
+   background: transparent;
    color:var(--blackwhite);
    text-decoration: none;
    margin:2px;
@@ -1231,7 +1259,7 @@ color:var(--blackwhite);
         height: 100px;
         border-radius: 50%;
         position: relative;
-        left: 206px;
+        left: 200px;
         top: -45px;
         box-shadow: var(--shadow1);
         z-index: 11;
@@ -1242,10 +1270,10 @@ color:var(--blackwhite);
     content: '';
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(#40fa07 0%, #caf50c 50%, #db41f2 100%);
+    background-image: linear-gradient(#000000 0%, #ffffff 100%, #000000 100%);
     filter: blur(20px);
     z-index: 11;
-    animation: anim5 0.5s linear infinite;}
+    animation: anim5 0.8s linear infinite;}
 
 
 
@@ -1264,6 +1292,12 @@ color:var(--blackwhite);
     border: 10px solid transparent;
     z-index: 16;
     position: absolute;
+    transition: all 1s;
+    cursor: pointer;;
+}
+.loader img:hover{
+    border: 0px solid transparent;
+    transform: scale(2,2);
 }
 
 
@@ -1301,3 +1335,160 @@ outline: none;
 color: white;
 border-radius: 0 0 10px 0;
 }
+
+.draggableDiv{
+    width: 40px;
+    height: 40px;
+    cursor: move;
+    position: fixed;
+    z-index: 9999;
+    top: 40px;
+    right: 30px;
+    border-radius: 50%;
+    display: none;
+
+}
+.draggableDiv img{
+    widows: 100%;height:100%;
+}
+
+
+.scrollBtn{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    bottom: -60px;
+    opacity: 0%;
+    right: 20px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow:1px 1px 5px  black;
+    font-size:30px;
+    text-align: center;
+    font-weight:bold;
+    padding:5px;
+    color:var(--blackwhite);
+    outline: none;
+    transition: all 1s;
+    background: var(--bgcolor);
+    
+ 
+}
+/* .scrollBtn:active{
+    bottom: 100px;
+    opacity: 0%;
+    transition: all .5s;
+
+} */
+.post2{
+    width: 98%;
+    height:100px;
+    color:red;
+    overflow: hidden;
+    margin-bottom:10px;
+  
+   
+}
+.post2 .left{
+width:50%;
+height:100%;
+float:left;
+border-radius:10px;
+cursor: pointer;
+overflow: hidden;
+}
+.post2 img{
+ width:100%;
+ height:100%;
+    }
+
+.post2 h5{
+    width: 50%;
+    height: 78px;
+    float: right;
+    overflow: hidden;
+    color: var(--blackwhite);
+    padding:5px;
+    cursor: pointer;
+     }
+    
+.sidebox h2{
+    float: left;
+    overflow: hidden;
+    top: -3px;
+    left: 0;
+    background: var(--bgcolor);
+    padding: 5px;
+    position: relative;
+    z-index: 3;
+    border-radius: 5px;
+   
+
+
+}
+.sidebox hr{
+    background: var(--blackwhite);
+    height: 7px;
+    width: 100%;
+    top: -20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    border-radius: 5px;
+}
+
+.centerDiv button {
+    padding: 10px;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    background: transparent;
+    color: var(--blackwhite);
+
+}
+.centerDiv button.contact{
+right:0;
+}
+.centerDiv button.about{
+left: 0;
+    
+}
+.footerAbout .windowbox{
+    width:200px;
+    height:300px;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: var(--shadow1);
+    background: var(--bgcolor);
+   
+
+}
+.footerAbout .contactdiv{
+right: 10px;
+
+}
+.footerAbout .aboutdiv{
+    left: 10px;
+
+}
+.footerAbout button.close {
+    padding: 5px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent;
+    color: var(--blackwhite);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
