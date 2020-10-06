@@ -34,17 +34,12 @@ var btn = $(".circle");
 
 $(document).mouseup(function(e){
   var container = $(".sideMenu");
-  
   // If the target of the click isn't the container
   if(!container.is(e.target) && container.has(e.target).length === 0 && !btn.is(e.target) && btn.has(e.target).length === 0 ){
       container.removeClass('menuRight');
       btn.removeClass('close');
       abtn.removeClass('activbtn');
       $('.side-cover').removeClass('cover');
-
-      
-
-
 
   }
  if(!$('.moremenudiv').is(e.target) && $('.moremenudiv').has(e.target).length === 0 && !$('.moremenu6button').is(e.target) && $('.moremenu6button').has(e.target).length === 0 ){
@@ -56,6 +51,7 @@ $(document).mouseup(function(e){
 if(!$('.reginfoMenu').is(e.target) && $('.reginfoMenu').has(e.target).length === 0 && !$('.regbutton').is(e.target) && $('.regbutton').has(e.target).length === 0 ){
   $('.reginfoMenu').slideUp();
 }
+
 
 });
 
@@ -294,5 +290,35 @@ alrtTBtn.on('click',function(){
   alrtTBox.fadeOut();
 });
 
+// post share button js
+var shareButton = $('.post button.share');
+for (var i = 0; i < shareButton.length; i++)
+{
+    (function(index){
+      shareButton[i].onclick = function(){
+var sdiv = $('.sharediv:eq('+index+')');
+var sbtn = $('.post button.share:eq('+index+')');
+sdiv.slideToggle();
+sbtn.toggleClass('rotateRound');
 
+$(document).mouseup(function(e){
+  if(!sbtn.is(e.target) && sbtn.has(e.target).length === 0 && !sdiv.is(e.target) && sdiv.has(e.target).length === 0 ){
+    sdiv.slideUp();
+  sbtn.removeClass('rotateRound');
+  }
+  });
+
+        }    
+    })(i);
+
+}
+
+
+$('#copypostlink').on('click',function(){
+  var copyTextMR = document.querySelector(".postLink").href;
+  copyTextMR.select();
+  copyTextMR.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+
+});
 
