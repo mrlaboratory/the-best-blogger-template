@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index number shower</title>
+</head>
+<body>
+    
+    <div id="buttons"></div>
+
+    <script>
+        var totalButton = 20;
+var buttonsDiv = document.getElementById('buttons');
+
+for (var i = 1; i <totalButton; i++) {
+   var button = document.createElement("input");
+   button.type = "button";
+   button.value= "Button "+i;
+   button.id = i;
+   button.onclick = function(event){
+    alert(event.target.id);
+    }
+   buttonsDiv.append(button);
+}
+    </script>
+</body>
+</html>
