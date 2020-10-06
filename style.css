@@ -38,8 +38,6 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --shadow1: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
     --shadow1hover : inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
     --fade:linear-gradient(to right, rgba(255, 255, 255, 0), var(--bgcolor) 50%);
-
-
     --main-bgcolor: #3285cf; 
     --main-sbgcolor: #416c91;
     --whiteblack:white;
@@ -47,20 +45,16 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --main-scolor:#3285cf26;
     --colorblack: black;
     --blackwhite:black;
- 
     --blackwhiteshadow: #c1c5c7;
     --lowwhiteblack:#7e80823b;
     --bgcolorwhite:#060606;
     --Obgcolor:#cbcfe2;
-    
     --hover:rgb(230,230,230);
-  
+    --width:70%;
  
 
   }
   [data-theme="dark"] {
-
-
     --main-bgcolor:black; 
     --main-sbgcolor: #000000d4;
     --whiteblack:black;
@@ -68,20 +62,22 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --main-scolor:#eae4e4;
     --colorblack: white;
     --blackwhite:white;
-   
     --blackwhiteshadow: black;
     --lowwhiteblack:black;
     --bgcolorwhite:white;
     --Obgcolor:#615f5f;
-   
     --hover: rgb(43 43 43);
-
     /* new */
     --bgcolor:#2b2b2b;
     --bgcolor2:#2b2b2b;
     --shadow1:-2px -2px 6px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
     --shadow1hover : inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
     --fade:linear-gradient(to right, rgba(255, 255, 255, 0), #2b2b2be0 100%);
+    }
+
+    [data-mode="grid"] {
+        --width:100%;
+
     }
 
     
@@ -205,8 +201,6 @@ width:70%;
 height:auto;
 float:left;
 display:table;
-
-
 }
 aside{
     width:27%;
@@ -266,9 +260,8 @@ border-radius:5px;
 height:150px;
 box-shadow: var(--shadow1);
 border-radius:5px;
-overflow: hidden;
 transition:all .5s;
-
+position: relative;
 }
 .post:hover{
     box-shadow: var(--shadow1hover);
@@ -288,6 +281,7 @@ transition:all .5s;
 height:100%;
 width:200px;
 float:left;
+overflow: hidden;
 
 
 }
@@ -299,8 +293,36 @@ float:left;
     border-radius: 10px;    
     background: url(img/cover.png) no-repeat scroll center;
     background-size: cover;
+    transition: all .5s;
 
-}img:hover{
+}
+
+.post button.share {
+    position: absolute;
+    background: transparent;
+    right: 70px;
+    bottom: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color: var(--blackwhite);
+    transition: all .5s;
+}
+.post button.share:hover {
+transform: rotateZ(-90deg);
+}
+
+
+.post figure img:hover{
+
+
+}
+
+img:hover{
     opacity:80%;
 }
 
@@ -703,8 +725,6 @@ transition: .5s all;
 .accordian{
     width:100%;
     height:auto;
-
-    background:white;
     color:black;
     font-family: 'Rokkitt', serif;
 
@@ -1384,7 +1404,7 @@ border-radius: 0 0 10px 0;
 } */
 .post2{
     width: 98%;
-    height:100px;
+    height:70px;
     color:red;
     overflow: hidden;
     margin-bottom:10px;
@@ -1402,6 +1422,13 @@ overflow: hidden;
 .post2 img{
  width:100%;
  height:100%;
+ transition: all .5s;
+    }
+
+    .post2 img:hover{
+        transform: scale(1.5,1.5);
+
+
     }
 
 .post2 h5{
@@ -1483,7 +1510,6 @@ right: 10px;
     outline: none;
     border: none;
     position: absolute;
-    left: 0;
     top: 0;
     background: transparent;
     color: var(--blackwhite);
@@ -1491,4 +1517,71 @@ right: 10px;
     font-size: 20px;
 }
 
+.footerAbout .contactdiv button.close{
+right: 0;
+}
 
+.footerAbout .aboutdiv button.close{
+    left: 0;
+}
+
+.alertbox {
+    background: transparent;
+    width: 100%;
+    height: 200px;
+    position: fixed;
+    top: 30%;
+    display: none;
+    z-index: 99999;
+}
+.alertbox .inside{
+margin: 0 auto;
+width: 300px;
+height: 200px;
+background: red;
+border-radius: 5px;
+background: var(--bgcolor);
+color: var(--blackwhite);
+box-shadow: var(--shadow1);
+position: relative;
+}
+.alertbox .inside h2{
+    padding-top:10px;
+    text-align: center;
+}
+#alerttext{
+    padding:10px;
+}
+.alertbox .inside button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding:10px;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--blackwhite);
+
+}
+.sharediv{
+    width: 150px;
+    height: 150px;
+    background: var(--bgcolor);
+    position: absolute;
+    top: 150px;
+    right: 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.4);
+    z-index: 9;
+    display: none;
+}
+ul{
+    list-style-type: none;
+}
+.sharediv li a{
+text-decoration: none;
+padding: 5px;
+display: block;
+
+}

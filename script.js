@@ -1,3 +1,11 @@
+// $('head').append('<link rel="stylesheet" type="text/css" href="style.css">');
+var alrtTBox = $('.alertbox');
+var alrtTxt = $('.alertbox .inside p');
+var alrtTBtn = $('.alertbox .inside button');
+var alrtaudio = new Audio('sound/alert.mp3');
+
+
+
 $('.togglebutton').on('click',mijanSideMenu)
 //   when scroll to top 
 
@@ -108,9 +116,6 @@ htag.innerHTML="Picture "+(i+1)+" is now on display";
 else{
 imgtag.src=photos[i];
 htag.innerHTML="Picture "+(i+1)+" is now on display";
-
-
-
 }
 }
 
@@ -144,28 +149,70 @@ if (inselector.text() === "+") {
   } else {
     inselector.text('+')
   } }); 
-var darkMode = document.querySelectorAll('.buttoninput')[0];
-var gridMode = document.querySelectorAll('.buttoninput')[1];
-var customMode = document.querySelectorAll('.buttoninput')[2];
+var darkTheme = document.querySelectorAll('.buttoninput')[0];
+var  graTheme = document.querySelectorAll('.buttoninput')[1];
+var  gridMode = document.querySelectorAll('.buttoninput')[2];
 var traMode = document.querySelectorAll('.buttoninput')[3];
 var graMode = document.querySelectorAll('.buttoninput')[4];
 var theme = window.localStorage.getItem('data-theme');
-
-// darkmode
+var modee = window.localStorage.getItem('data-mode');
+// darktheme
   if(theme) document.documentElement.setAttribute('data-theme', theme);
-  darkMode.checked = theme == 'dark' ? true : false;
-  darkMode.addEventListener('change', function () {
+  darkTheme.checked = theme == 'dark' ? true : false;
+  darkTheme.addEventListener('change', function () {
   if(this.checked){
+    if(graTheme.checked){
+      alrtTBox.fadeIn();
+      alrtTxt.text('Dark theme and Gradient theme are cannot be used together ..');
+      
+      graTheme.checked = false;
+
+    }
     document.documentElement.setAttribute('data-theme', 'dark');
     window.localStorage.setItem('data-theme', 'dark');
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
     window.localStorage.setItem('data-theme', 'light');
-
   }
 });
 
+// gradient theme 
+if(theme) document.documentElement.setAttribute('data-theme', theme);
+graTheme.checked = theme == 'gradient' ? true : false;
+graTheme.addEventListener('change', function () {
+if(this.checked){
+  if(darkTheme.checked){
+    alrtTBox.fadeIn();
+    alrtTxt.text('Dark theme and Gradient theme are cannot be used together ..');
+    
+    darkTheme.checked = false;
+
+  }
+  document.documentElement.setAttribute('data-theme', 'gradient');
+  window.localStorage.setItem('data-theme', 'gradient');
+} else {
+  document.documentElement.setAttribute('data-theme', 'light');
+  window.localStorage.setItem('data-theme', 'light');
+
+}
+});
+//  gridmode
+ if(modee) document.documentElement.setAttribute('data-mode', modee);
+ gridMode.checked = modee == 'grid' ? true : false;
+ gridMode.addEventListener('change', function () {
+ if(this.checked){
+   
+   document.documentElement.setAttribute('data-mode', 'grid');
+   window.localStorage.setItem('data-mode', 'grid');
+ } else {
+   document.documentElement.setAttribute('data-mode', 'default');
+  window.localStorage.setItem('data-mode', 'default');
+
+ }
+});
+
 // error box when removed developers credit
+
 var allText ='<div class="errorbox"><h1>warning !!!</h1><p>This box shows you a warning if you have removed a developer credit. Because the developer credit must be in this template if you want to use the free version</p> <a href="https://www.facebook.com/mrlaboratory">Contact us</a> to buy premium version of this template.</p><p>Email : admin@mrlaboratory.com</p><p>Email : mrlaboratory23@gmail.com</p><p>Phone Number : +8801854650673</p><p>Facebook : fb.com/mrlaboratory</p><p>Thank You ...</p><button onclick="errorRemove()">OK</button>';
 var errorC = document.createElement("div");
 document.body.appendChild(errorC);
@@ -180,6 +227,7 @@ function errorRemove(){
 } window.onload = function(){
   if(document.querySelector(".copyrightMR") == null){
     erorremov.css('display','flex');
+   
 }else{
 var cr = document.querySelector('.copyrightMR');
 cr.innerHTML="<a href='https://www.mrlaboratory.com'> Theme Created By MR Laboratory</a>";
@@ -242,4 +290,9 @@ redirectselector.title="MR Laboratory to "+redirectURL;}
           
         });
 
-       
+alrtTBtn.on('click',function(){
+  alrtTBox.fadeOut();
+});
+
+
+
