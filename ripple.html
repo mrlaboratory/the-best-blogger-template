@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ripple {
+  font-size: 5em;
+  background-color: rgb(0, 169, 244);
+
+  /* custom property */
+  --ripple-color: rgba(255, 255, 255, 0.54);
+}
+
+.ripple.animating {
+  /* usage of the custom "ripple" paint function */
+  background-image: paint(ripple);
+}
+    </style>
+</head>
+<body>
+    
+<button class="ripple">Click me!</button>
+
+
+
+    <script>
+
+// Adds the custom paint function
+CSS.paintWorklet.addModule('https://googlechromelabs.github.io/houdini-samples/paint-worklet/ripple/paintworklet.js');
+// the actual animation of the ripple effect
+function rippleEffect(element) {
+  let start, x, y;
+  element.addEventListener('click', function (evt) {
+    this.classList.add('animating');
+    [x, y] = [evt.offsetX, evt.offsetY];
+    start = performance.now();
+    const raf = (now) => {
+      const tick = Math.floor(now - start);
+      this.style.cssText = `--ripple-x: ${x}; --ripple-y: ${y}; --animation-tick: ${tick};`;
+      if (tick > 1000) {
+        this.classList.remove('animating');
+        this.style.cssText = `--animation-tick: 0`;
+        return;
+      }
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+  });
+}
+
+rippleEffect(document.querySelector('.ripple'));
+    </script>
+</body>
+</html>

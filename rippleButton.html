@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple Button</title>
+    <style>
+        *{
+            
+        }
+        button{
+            border:none;
+            outline:none;
+            background-color: #290;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 3px;
+            box-shadow: 0 2px 2px #bbb;
+            position: relative;
+            overflow: hidden;
+        }
+        button::before{
+            content: "";
+            position: absolute;
+            background-color: #EEE;
+            padding: 50%;
+            border-radius:50%;
+            left:calc(100% * var(--ripple-x));
+            top:calc(100% * var(--ripple-y));
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0;
+            transition: transform 1s, opacity 1s;
+        }
+
+        button:active::before{
+            transition: 0s;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+    </style>
+</head>
+<body>
+    
+<button>Click</button>
+    <button>Button</button>
+    <script>
+
+var root = document.documentElement;
+document.addEventListener('mousedown', ev => {
+var el = ev.target;
+var x = (ev.clinetX - el.offsetLeft) / el.offsetWith;
+var y = (ev.clinetY - el.offseTop) / el.offsetHeight;
+root.style.setProperty('--ripple-x', x);
+root.style.setProperty('--ripple-y', y);
+
+})
+    </script>
+</body>
+</html>

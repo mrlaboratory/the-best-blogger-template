@@ -89,6 +89,13 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --fade:linear-gradient(to right, rgba(255, 255, 255, 0), #2b2b2be0 100%);
     }
 
+
+    [data-theme="gradient"] {
+  
+
+        }
+
+
     [data-mode="grid"] {
         --width:45%;
         --width2:100%;
@@ -1338,7 +1345,7 @@ color:var(--blackwhite);
         left: 200px;
         top: -45px;
         box-shadow: var(--shadow1);
-        z-index: 11;
+        z-index: 8;
         overflow: hidden;
     }
     .centerDiv .loader:before{
@@ -1550,7 +1557,7 @@ left: 0;
     border-radius: 5px;
     box-shadow: var(--shadow1);
     background: var(--bgcolor);
-    z-index: 9999;
+    z-index: 9;
     display: none;
    
 
@@ -1710,5 +1717,9 @@ ul{
     text-decoration: none;
     margin: 10px;
     color: var(--blackwhite);
+    border-radius: 5px;
 
+}
+.aboutdiv ul li a:active{
+    box-shadow: var(--shadow1hover);
 }
