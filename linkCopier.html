@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy href valu </title>
+</head>
+<body>
+    
+<a class="url" href="https://www.mrlaboratory.com">Facebook</a>
+<button onclick="copyaUrl()">Copy</button>
+    <script>
+
+function copyaUrl() {
+  var copyUrl = document.querySelector(".url").getAttribute('href');
+navigator.clipboard.writeText(copyUrl);
+}
+    </script>
+</body>
+</html>
