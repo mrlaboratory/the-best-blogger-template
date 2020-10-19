@@ -6,18 +6,13 @@ box-sizing:border-box;
 
 }
 
+/* for time  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 html {
     scroll-behavior: smooth;
   }
   
-body{
-height:100vh;
-font-family: 'Hind Siliguri', sans-serif;
-line-height: 19px;
-overflow-x: hidden; /* Hide horizontal scrollbar */
 
-
-}
 
 
 /* background: linear-gradient(30deg,#d367c1 10%,#dedf40 25%,#62cb5c 50%,#00bbcb 75%,#ab79d6 90%); */
@@ -34,6 +29,7 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --greyDark: #9baacf;
   /* new */
     --bgcolor:#ebecf0;
+    --backg1:#ebecf0;
     --bgcolor2:#ebecf0;
     --shadow1: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
     --shadow1hover : inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
@@ -62,6 +58,11 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --display2:inline-block;
     --position:relative;
     --top:150px;
+    --backg2:linear-gradient(#000000 0%, #ffffff 100%, #000000 100%);
+    --height4:1.3em;
+    --height5: 2.4em;
+    --top5:100px;
+           
    
  
 
@@ -83,16 +84,26 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     --hover2:#484343ba;
     /* new */
     --bgcolor:#2b2b2b;
+    --backg1:#2b2b2b;
     --bgcolor2:#2b2b2b;
     --shadow1:-2px -2px 6px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
     --shadow1hover : inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
     --fade:linear-gradient(to right, rgba(255, 255, 255, 0), #2b2b2be0 100%);
+    --backg2:linear-gradient(#000000 0%, #ffffff 100%, #000000 100%);
     }
 
 
     [data-theme="gradient"] {
-  
-
+        --bgcolor:linear-gradient(30deg,#d367c1 10%,#dedf40 25%,#62cb5c 50%,#00bbcb 75%,#ab79d6 90%);
+        --shadow1:-2px -2px 6px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
+       /* --shadow1hover: inset 0.2rem 0.2rem 0.5rem rgba(255, 255, 255, 0.1), inset -0.2rem -0.2rem 0.5rem rgba(0, 0, 0, 0.8);
+     */ --shadow1hover:0px 0px 2px #585555;
+     --blackwhite:white;
+     --backg1:#ab79d6;
+     --main-bgcolor:#ab79d6;
+     --backg2:linear-gradient(30deg,#d367c1 10%,#dedf40 25%,#62cb5c 50%,#00bbcb 75%,#ab79d6 90%);
+     --Obgcolor:#0097a9;
+     --backg3:linear-gradient(270deg,#d367c1 10%,#dedf40 25%,#62cb5c 50%,#00bbcb 75%,#ab79d6 90%);
         }
 
 
@@ -105,14 +116,37 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
         --display:none;
         --display2:none;
         --position:absolute;
-        --bottom2:20px;
+        --bottom2:17px;
         --top:250px;
+        --height4:1.3em;
+        --height5: 1.3em;
+        --top5:250px;
+    }
+
+
+
+    @media only screen and  (min-width: 1500px){
+        .main-container {
+            padding-left:50px;
+            padding-right:50px;
+        }
+
+    }
+  
+
+    @media only screen and  (min-width: 1600px){
+        .main-container {
+            padding-left:200px;
+            padding-right:200px;
+        }
+
     }
 
 
     @media only screen and  (min-width: 1200px){
         [data-mode="grid"] {
             --width:30%;
+            
         }
 
     }
@@ -120,13 +154,29 @@ overflow-x: hidden; /* Hide horizontal scrollbar */
     @media screen and (max-width: 500px){
         [data-mode="grid"] {
             --width:100%;
+            --height4: 2.4em;
         }
+        :root{
+            --height2:100px;
+        }
+        [data-mode="grid"] {
+            --height2:250px;
+        }
+       
 
     }
   
-
     
- 
+
+    body{
+        height:100vh;
+        /* font-family: 'Hind Siliguri', sans-serif;  */
+        font-family: 'Roboto', sans-serif;
+        line-height: 19px;
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        background:var(--bgcolor);
+        
+        }
 
 
 
@@ -147,23 +197,33 @@ height:auto;
 .nav-bar1{
     width:100%;
     height:40px;
-    background:var(--bgcolor2); 
+ background:var(--bgcolor);
     text-align:center;
     z-index: 99;
     position: sticky;
     transition: all .5s;
+    background-size: 1200% 1200%;
+-webkit-animation: mr-animation 16s ease infinite;
+-moz-animation: mr-animation 16s ease infinite;
+animation: mr-animation 16s ease infinite;
+
     
 }
 .nav-bar2{
     width:100%;
     height:41px;
-    background:var(--bgcolor);
+    background:var(--bgcolor); 
     box-shadow: var(--shadow1);
     color: var(--blackwhite);
     position:sticky;
     top:0;
     z-index:999;
     transition: all .5s;
+    background-size: 1200% 1200%;
+-webkit-animation: mr-animation 16s ease infinite;
+-moz-animation: mr-animation 16s ease infinite;
+animation: mr-animation 16s ease infinite;
+
   
   
 }
@@ -215,9 +275,9 @@ float:left;
 text-decoration:none;
 color:var(--blackwhite);
 padding:10.8px;
-
 display:inline-block;
 margin-left:5px;
+transition: all .5s;
 
 }
 
@@ -236,7 +296,7 @@ transform: 1s all;
 .main-content{
    width:100%;
    height:auto;
-   background:var(--bgcolor);
+  
    display:table;
  
 }
@@ -266,8 +326,6 @@ aside{
 
 .nav-bar2 {
 top:0px;
-color: var(--blackwhite);
-background: var(--bgcolor);
 
 }
 
@@ -352,7 +410,7 @@ cursor: pointer;
 .post button.share {
     position: absolute;
     background: transparent;
-    right: 80px;
+    right: 83px;
     bottom: 5px;
     width: 30px;
     height: 30px;
@@ -384,22 +442,24 @@ img:hover{
     display: contents;
 }
 .text-content p{
-    font-family: 'Hind Siliguri', sans-serif;
+    /* font-family: 'Hind Siliguri', sans-serif; */
+    font-family: 'Zilla Slab', serif;
     line-height: 19px;
     display: var(--display);
 
 }
 .text-content .publisher {
     position: relative;
-    bottom: 0px;
-    font-family: 'Bree Serif', serif;
+    bottom: 3px;
+    font-size: 12px;
     display: var(--display2);
 }
 
 .text-content .published {
     position: relative;
-    bottom: 0px;
+    bottom: 3px;
     display: var(--display2);
+    font-size: 12px;
 }
 .text-content .category {
     position: absolute;
@@ -415,7 +475,8 @@ img:hover{
     margin: 0 0 7px 0;
     overflow: hidden;
     position: var(--position);
-    height: 0.76em;
+    height: 1.3em;
+    line-height: 30px;
     bottom: var(--bottom2);
   
 }
@@ -429,10 +490,10 @@ img:hover{
     right: 0;
     font-weight: bold;
     margin: 5px;
-    background: var(--bgcolor);
+    background: var(--backg1);
     padding: 5px;
     color: var(--blackwhite);
-    border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 10px;
    
 
 }
@@ -541,8 +602,8 @@ display:none;
     
 
     .sideMenu{
-        background:var(--whiteblack);
-        
+        /* background:var(--backg1); */
+        background:var(--bgcolor);
         width: 100%;
         max-width: 250px;
         height: 100%;
@@ -667,8 +728,8 @@ transition: .5s all;
             }
             .reginfoMenu {
                 width: 260px;
-                height: 276px;
-                background: var(--whiteblack);
+                height: 279px;
+                background: var(--bgcolor);
                 position: absolute;
                 right: 25px;
                 top: 40px;
@@ -679,15 +740,14 @@ transition: .5s all;
             
             }
 
-                .notificationbutton {
-                    width: 34px;
-
-    height: auto;
-    right: 78px;
-    position: absolute;
-    cursor: pointer;
-    
-               
+            .notificationbutton {
+                width: 34px;
+                height: auto;
+                right: 78px;
+                position: absolute;
+                cursor: pointer;
+                font-size: 30px;
+            }    
                   
                 }
               
@@ -734,7 +794,7 @@ transition: .5s all;
 .moremenudiv{
     width: 260px;
     height: 280px;
-    background: var(--whiteblack);
+    background: var(--bgcolor);
     position: absolute;
     right: 123px;
     top: 40px;
@@ -756,7 +816,7 @@ transition: .5s all;
 .userinfo {
     width: 100%;
     height: 79px;
-    background: var(--bgcolor);
+   
     color: var(--blackwhite);
     font-family: 'Rokkitt', serif;
 }
@@ -802,20 +862,23 @@ transition: .5s all;
     background:var(--bgcolor);
     color:var(--blackwhite);
     padding:10px;
-    
     border-top:2px solid var(--main-bgcolor);
     position: relative;
     font-weight:bold;
     padding-left:40px;
-     
+    transition: all .5s;
+    background-size: 1200% 1200%;
+    -webkit-animation: mr-animation 16s ease infinite;
+    -moz-animation: mr-animation 16s ease infinite;
+    animation: mr-animation 16s ease infinite;
     }
     .accbtn:last-child{
-    border-bottom:2px solid var(--main-bgcolor);
+        border-bottom:2px solid var(--main-bgcolor);
 
     }
     .accbtn:hover{
 
-        background:var(--bgcolor);
+        background:var(--Obgcolor);
     }
     
     
@@ -908,7 +971,7 @@ border-top:1px solid var(--main-bgcolor);
         left: 5px;
         top: 5px;
         padding: 7px;
-        color: var(--bgcolorwhite);
+        /* color: var(--bgcolorwhite); */
     }
     .notifydiv .averter{
         height: 50px;
@@ -999,7 +1062,7 @@ height:auto;
     .useraccount li a,.moremenudiv li a {
         text-decoration: none;
         width: 100%;
-        background: var(--bgcolor);
+        background: transparent;
         padding: 10px;
         display: block;
         font-size: 17px;
@@ -1008,12 +1071,13 @@ height:auto;
         font-family: arial;
         border-top:1px solid var(--border1);
     }
+
     .useraccount li i{
 
         padding-right:10px;
     }
     .useraccount li a:hover,.moremenudiv li a:hover{
-background:var(--hover);
+background:var(--Obgcolor);
 color: var(--blackwhite);
 transition:all .5s;
 
@@ -1052,7 +1116,7 @@ transition:all .5s;
     border-top: 1px solid var(--main-bgcolor);
 }
 .acctext a:hover {
-background:var(--whiteblack);
+background:var(--Obgcolor);
 transition:all .5s ;
 
 }
@@ -1075,7 +1139,7 @@ list-style-type: none;
 
  .nav-bar2 .left form {
     display: inline-block;
-    width: 80%;
+    width: 70%;
     height: 41px;
     position: absolute;
     top:0;
@@ -1134,11 +1198,7 @@ color:var(--blackwhite);
 footer{
     width:100%;
     height:auto;
-    background:var(--bgcolor);
     padding:0px;
-   
-    color:white;
-    
     }
    
 .footerBottom{
@@ -1160,10 +1220,14 @@ float:left;
 color: var(--blackwhite);
 padding: 15px;
 display: table;
-
 }
-
-
+.adsbox img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 20px;
+}
 
 .footerTop .right{
     width:50%;
@@ -1176,13 +1240,17 @@ display: table;
 }
 
 .footerMidle{
-width:98%;
+width:96%;
 height:200px;
 box-shadow: var(--shadow1);
-margin:10px;
+margin:0 auto;
 padding-right:10px;
-
-
+background:var(--bgcolor);
+border-radius:10px;
+background-size: 1200% 1200%;
+-webkit-animation: mr-animation 16s ease infinite;
+-moz-animation: mr-animation 16s ease infinite;
+animation: mr-animation 16s ease infinite;
 
 
 }
@@ -1273,6 +1341,12 @@ color: var(--blackwhite);
         width:100%;}
         .footerTop .left{
             width:100%;} 
+            .nav-bar2 .left form{
+                display: none;
+            }
+            .nav-bar2{
+                top:0;
+            }
 
 
     
@@ -1296,11 +1370,14 @@ color: var(--blackwhite);
     .footerAbout{
 width:100%;
 height:400px;
-
 min-height: 400px;
 justify-content: center;
 align-items: center;
 display:flex;
+background-size: 1200% 1200%;
+-webkit-animation: mr-animation 16s ease infinite;
+-moz-animation: mr-animation 16s ease infinite;
+animation: mr-animation 16s ease infinite;
 
 
 
@@ -1317,12 +1394,18 @@ margin: 0 auto;
 box-shadow: var(--shadow1);
 position: relative;
 border-radius: 10px;
-
+background: var(--bgcolor);
+background-size: 1200% 1200%;
+-webkit-animation: mr-animation 16s ease infinite;
+-moz-animation: mr-animation 16s ease infinite;
+animation: mr-animation 16s ease infinite;
     }
     .centerDiv h3{
         text-align: center;
         font-size: 35px;
         color:var(--blackwhite);
+        margin-top:-30px;
+        
 
     }
     .centerDiv p{
@@ -1353,7 +1436,7 @@ color:var(--blackwhite);
     content: '';
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(#000000 0%, #ffffff 100%, #000000 100%);
+    background: var(--backg2);
     filter: blur(20px);
     z-index: 11;
     animation: anim5 0.8s linear infinite;}
@@ -1399,42 +1482,160 @@ color:var(--blackwhite);
     line-height: 25px;
     font-size: 17px;
 }  */
-.errorcover .errorbox a{
-    color:white;
-}
-.errorcover .errorbox h1{
-    margin-bottom: 20px;
-    color:red;
-}
-.errorcover .errorbox button{
+
+
+/* .errorcover .errorbox button{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 10px;
+    right: 10px;
     width: 60px;
     height: 40px;
 cursor: pointer;
 background: transparent;
 outline: none;
-color: white;
-border-radius: 0 0 10px 0;
+border: none;
+box-shadow: var(--shadow1);
+color: var(--blackwhite);
+border-radius: 50%;
+margin-top: 20px;
+} */
+
+
+}
+.adsbox p {
+    position: absolute;
+    z-index: 99;
+    background: var(--bgcolor);
+    border-radius: 0 0 5px 0;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .draggableDiv{
     width: 40px;
     height: 40px;
-    cursor: move;
+    cursor: pointer;
     position: fixed;
     z-index: 9999;
-    top: 40px;
-    right: 30px;
     border-radius: 50%;
-    display: none;
-
+    bottom: 40px;
+    left: 40px;
+   
 }
 .draggableDiv img{
     widows: 100%;height:100%;
 }
+.dragdiv{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--bgcolor);
+    bottom: 3px;
+    left: 10;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px black;
+    transition: all 1s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color:var(--blackwhite);
+}
 
+}
+.dragdiv h5{
+    color:var(--blackwhite);
+    text-align: center;
+}
+
+
+.dragdiv::-webkit-scrollbar {
+    display: none;}     
+    .dragdiv::-moz-scrollbar {
+        display: none;}  
+        .dragdiv::-o-scrollbar {
+            display: none;}  
+
+
+.dragdiv ul li{
+padding:5px;
+background: var(--Obgcolor);
+margin: 5px;
+margin-left:20px;
+border-radius:5px;
+position: relative;
+color:var(--blackwhite);
+}
+
+
+.dragdiv ul li{
+    padding:5px;
+    background: var(--Obgcolor);
+    margin: 5px;
+    margin-left:20px;
+    border-radius:5px;
+    position: relative;
+    color:var(--blackwhite);
+    }
+
+.dragdiv ul li:before{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 16px solid var(--Obgcolor);
+    border-bottom: 20px solid transparent;
+    content: '';
+    left: -14px;
+}
+
+
+
+.dragnotify{
+    position: absolute;
+    height: 40px;
+    width: 0px;
+    bottom: 0px;
+    left: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+    transition: width 1s;
+    background: var(--bgcolor);
+    overflow: hidden;
+}
+.dragnotifyadd{
+    width: 300px;
+}
+.dragnotify p{
+    padding-left: 30px;
+    margin: 11px;
+    white-space:nowrap;
+    overflow:hidden;
+    font-weight: bold;
+    color: var(--blackwhite);
+}
+
+
+
+.dragdivopen{
+    width: 250px;
+    height: 300px;
+    border-radius: 5px 5px 5px 20px;
+    bottom: 0px;
+    left: 0;
+}
+.dragbtn {
+    padding: 10px;
+    font-size: 20px;
+    color: var(--blackwhite);
+    background: var(--bgcolor);
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px black;
+    z-index: 9;
+    position: absolute;
+    transition:all 1s ;
+}
+.dragbtnrotate{
+    transform:rotateZ(360deg);
+   
+}
 
 .scrollBtn{
     width: 40px;
@@ -1446,7 +1647,6 @@ border-radius: 0 0 10px 0;
     opacity: 0%;
     right: 20px;
     border-radius: 50%;
-    background: transparent;
     box-shadow:1px 1px 5px  black;
     font-size:30px;
     text-align: center;
@@ -1455,7 +1655,7 @@ border-radius: 0 0 10px 0;
     color:var(--blackwhite);
     outline: none;
     transition: all 1s;
-    background: var(--bgcolor);
+    background: var(--backg1);
     border: none;
     
  
@@ -1510,7 +1710,7 @@ overflow: hidden;
     overflow: hidden;
     top: -3px;
     left: 0;
-    background: var(--bgcolor);
+    background: var(--backg1);
     padding: 5px;
     position: relative;
     z-index: 3;
@@ -1692,7 +1892,7 @@ ul{
 .sharediv li a{
     text-decoration: none;
     width: 100%;
-    background: var(--bgcolor);
+    cursor: pointer;
     padding: 5px;
     display: block;
     font-size: 15px;
@@ -1701,6 +1901,10 @@ ul{
     font-family: arial;
     border-top: 1px solid var(--border1);
     border-radius: 0 0 5px 5px;
+}
+
+.sharediv li a:hover{
+    background:var(--Obgcolor);
 }
 .footerAbout .aboutdiv{
   
@@ -1723,3 +1927,176 @@ ul{
 .aboutdiv ul li a:active{
     box-shadow: var(--shadow1hover);
 }
+
+.todayDiv {
+    position: absolute;
+    right: 177px;
+    background: transparent;
+    width: 150px;
+    height: 100%;
+    top: 0;
+    padding: 5px;
+}
+.todayDiv .time{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Teko', sans-serif;
+}
+.todayDiv .date{
+    font-size: 10px;
+    text-align: center;
+}
+.adsbox{
+    width:100%;
+    height: 250px;
+    box-shadow: var(--shadow1);
+    background: var(--bgcolor);
+    border-radius: 5px;
+    overflow: hidden;
+    background-size: 1200% 1200%;
+-webkit-animation: mr-animation 16s ease infinite;
+-moz-animation: mr-animation 16s ease infinite;
+animation: mr-animation 16s ease infinite;
+position: relative;
+}
+.adsbox img{
+    position: absolute;
+    width:100%;
+    height:100%;
+}
+
+
+@-webkit-keyframes mr-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+    }
+    @-moz-keyframes mr-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+    }
+    @keyframes mr-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+    }
+    .pagination{
+        width:100%;
+        height: 60px;
+        
+    }
+    .pagination ul li {
+        display: inline-block;
+      
+    }
+    .pagination ul{
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+
+    }
+    .pagination ul li a{
+        text-decoration: none;
+        display: inline-block;
+        padding: 12px;
+        margin: 8px;
+        box-shadow: var(--shadow1);
+        border-radius: 5px;
+        font-weight: bold;
+        color: var(--blackwhite);
+    }
+    .pagination ul li a:hover,.pagination .active{
+        box-shadow: var(--shadow1hover);
+        color: var(--blackwhite);
+      
+    }
+    /* a[title]:hover:after {
+        content: attr(title);
+        position: absolute;
+        color: red;
+        
+      } */
+      .sidebox iframe{
+          border-radius: 5px;
+      }
+
+      .video-container {
+        overflow: hidden;
+        position: relative;
+        width:100%;
+    }
+    
+    .video-container::after {
+        padding-top: 56.25%;
+        display: block;
+        content: '';
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* for ripple css  */
+    .ripple {
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .ripple .rippleff {
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+    }
+    
+    @keyframes ripple {
+        to {
+            transform: scale(2.5);
+            opacity: 0;
+        }
+    }
+    .dragbtnon{
+        transform: rotateZ(45deg);
+        animation: rotatez 2s infinite;
+    }
+    @keyframes rotatez {
+       0%{transform: rotateZ(0deg);color:red;}
+       25%{transform: rotateZ(45deg);color:var(--blackwhite);}
+       50%{transform: rotateZ(-45deg);color:var(--blackwhite);}
+       75%{transform: rotateZ(0deg);color:var(--blackwhite);}
+       100%{transform: rotateZ(0deg);color:red;}
+    }
+
+   
+    @media only screen and  (max-width: 500px){
+        .text-content .publisher,.text-content #views,.text-content p{
+            display: none;
+        }
+        
+        .post h2{
+            height:var(--height5);
+        }
+        .sharediv{
+            top:var(--top5);
+        }
+
+    }
+    @media only screen and  (max-width: 618px){
+        .text-content .published{
+            display: none;
+        }
+    }
+    @media only screen and  (max-width: 480px){
+    .todayDiv{
+        display: none;
+    }}
+
+
+
