@@ -62,11 +62,16 @@ html {
     --height4:1.3em;
     --height5: 2.4em;
     --top5:100px;
-           
-   
- 
-
+    
   }
+
+@media only screen and  (max-width: 400px){
+:root{
+   --width2:150px;
+}
+
+}
+
   [data-theme="dark"] {
     --main-bgcolor:black; 
     --main-sbgcolor: #000000d4;
@@ -1519,7 +1524,7 @@ margin-top: 20px;
     z-index: 9999;
     border-radius: 50%;
     bottom: 40px;
-    left: 40px;
+    left: 20px;
    
 }
 .draggableDiv img{
@@ -2073,8 +2078,6 @@ position: relative;
        75%{transform: rotateZ(0deg);color:var(--blackwhite);}
        100%{transform: rotateZ(0deg);color:red;}
     }
-
-   
     @media only screen and  (max-width: 500px){
         .text-content .publisher,.text-content #views,.text-content p{
             display: none;
@@ -2097,6 +2100,23 @@ position: relative;
     .todayDiv{
         display: none;
     }}
+@media only screen and  (max-width: 400px){
+.moremenudiv,.reginfoMenu,.notifydiv{
+    right:5px;
+}
 
+}
 
-
+@media only screen and  (max-width: 530px){
+.footerAbout{
+    width:100%;
+    padding:10px;
+}
+.centerDiv{
+ height: 380px;
+}
+.centerDiv .loader{
+    left:40%;
+    
+}
+}
