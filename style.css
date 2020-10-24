@@ -1351,6 +1351,7 @@ color: var(--blackwhite);
             }
             .nav-bar2{
                 top:0;
+                position:fixed;
             }
 
 
