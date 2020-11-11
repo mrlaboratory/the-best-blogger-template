@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
+   <!-- 
+   You can select default theme and mode 
+   <html lang="en"  data-theme="dark">
+   <html lang="en"  data-theme="gradient">
+   <html lang="en" data-mode="grid"> 
+      -->
+
 <head>
    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Design</title>
-    
+    <title>Home - Template Design</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap' rel='stylesheet'/>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
@@ -23,11 +30,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
 <body>
+ <div class="centerpreloder">
+    <img src="img/mr.png" alt="">
+      <div id="preloader" class="light">
+        <div class="outer">
+          <!-- Google Chrome -->
+          <div class="infinityChrome">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+      
+          <!-- Safari and others -->
+          <div class="infinity">
+            <div>
+              <span></span>
+            </div>
+            <div>
+              <span></span>
+            </div>
+            <div>
+              <span></span>
+            </div>
+          </div>
+          <!-- Stuff -->
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-outer">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div></div>
+ 
+   
+
+
+
+
     <div class="main-container">
 
         <div class="nav-bar1">
             <ul>
-                <li><a class="ripple" href="#"><i class="fa fa-home"></i> Home</a></li>
+                <li><a class="ripple" href="index.html"><i class="fa fa-home"></i> Home</a></li>
                 <li><a class="ripple" href="#"><i class="fa fa-info-circle"></i> About</a></li>
                 <li><a class="ripple" href="#"><i class="fa fa-envelope"></i> Contact</a></li>
                 <li><a class="ripple" href="#"><i class="fa fa-question"></i> FAQ</a></li>
@@ -40,10 +88,6 @@
             </ul>
          
          </div>
-         
-         
-         
-         
          <div class="nav-bar2"   >
          <div class="left">
             <div class="togglebutton">
@@ -91,15 +135,9 @@
                     
                   </ul>
                </div>
-               
- 
-              
+   
                </div>
-
              <div class="notifydiv">
-               
-
-
                <div class="commenterDetails">
                   <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
                   <div class="commenTex">
@@ -113,7 +151,6 @@
    <h4>Md Mijanur Rahaman</h4>
    <p>Best Tutorial</p></div>
                </div>
-
                <div class="commenterDetails">
                   <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
                   <div class="commenTex">
@@ -186,6 +223,13 @@
            <div class="side-cover"></div>
             <div class="sideMenu">
                 <!-- accordion -->
+<div class="MSearch">
+  <form action="">
+     <input class="msearchbox" placeholder="Search..." type="search"/>
+     <button class="msearchbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+  </form>
+
+</div>
                 <div class="accordian">
              
                   <div class="accbtn ripple"><span class="acclog"><i class="fas fa-edit"></i></span> Personalized<p class="accsym">+</p></div>
@@ -317,7 +361,7 @@
                   <div class="accbtn ripple"><span class="acclog"><i class="fa fa-link"></i></span>Link List<p class="accsym">+</p></div>
                   <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
               
-                  <div class="accbtn"><span class="acclog"><i class="fa fa-link"></i></span>Social Media Profile<p class="accsym">+</p></div>
+                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-link"></i></span>Social Media Profile<p class="accsym">+</p></div>
                   <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
               
                   <div class="accbtn ripple"><span class="acclog"><i class="fa fa-bookmark"></i></span>Services<p class="accsym">+</p></div>
@@ -386,21 +430,7 @@
                   </ul>
                   </div>
               
-                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-tags"></i></span>Who are You ?<p class="accsym">+</p></div>
-                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
-              
-                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-tags"></i></span>Who are You ?<p class="accsym">+</p></div>
-                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
-              
-                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-tags"></i></span>Who are You ?<p class="accsym">+</p></div>
-                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
-              
-                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa fa-heart"></i></span>Who are You ?<p class="accsym">+</p></div>
-                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
-              
-                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-tags"></i></span>Who are You ?<p class="accsym">+</p></div>
-                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
-              
+               
                   <div class="accbtn ripple"><span class="acclog"><i class="fa fa-heart"></i></span>Services<p class="accsym">+</p></div>
                   <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
                 
@@ -429,18 +459,19 @@
 
       <section class="main-content">
    <article>
+      <!-- post no 1  -->
      <div class="post" title="Facebook Tricks">
          <figure>
-           <a href="#Facebook_tricks0"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
+           <a href="facebookTricks.html"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
             <figcaption>Facebook Tricks</figcaption>
          </figure>
          <div class="text-content">
-            <h2><a class='postLink' href="#facebook_tricks0">Lorem Ipsum is simply dummy text of the printing and typesetting</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
+            <h2><a class='postLink' href="facebookTricks.html">Top Best Tricks For Facebook !!</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
             <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-           <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-        <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-           <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-           <h4 id="readmore" title="Readmore" >Readmore</h4>   
+           <h5 class="publisher"><i class="fa fa-user"></i> <a href="admin.html">Md Mijanur Rahaman</a></h5>
+        <h5 class="published"><i class="fa fa-calendar"></i> <a href="archive.html">1 november 2020</a></h5>
+           <h5 class="category"><i class="fa fa-tag"></i><a href="category.html">Facebook</a></h5>
+           <h4 id="readmore" title="Readmore" ><a href="facebookTricks.html">Readmore</a></h4>   
            <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
          </div>
             <div class="sharediv">
@@ -453,25 +484,25 @@
             </ul>
             </div>
           </div> 
-
-
+          <!-- post no 2  -->
+          
           <div class="post" title="Facebook Tricks">
             <figure>
-              <a href="#Facebook_tricks1"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
+              <a href="facebookTricks.html"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
                <figcaption>Facebook Tricks</figcaption>
             </figure>
             <div class="text-content">
-               <h2><a class='postLink' href="#facebook_tricks1">Facebook Tricks,Facebook Tricks,Facebook Tricks Facebook Tricks Facebook Tricks</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
+               <h2><a class='postLink' href="facebookTricks.html">Top Best Tricks For Facebook !!</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
                <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-              <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-           <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-              <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-              <h4 id="readmore" title="Readmore" >Readmore</h4>   
+              <h5 class="publisher"><i class="fa fa-user"></i> <a href="admin.html">Md Mijanur Rahaman</a></h5>
+           <h5 class="published"><i class="fa fa-calendar"></i> <a href="archive.html">1 november 2020</a></h5>
+              <h5 class="category"><i class="fa fa-tag"></i><a href="category.html">Facebook</a></h5>
+              <h4 id="readmore" title="Readmore" ><a href="facebookTricks.html">Readmore</a></h4>   
               <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
             </div>
                <div class="sharediv">
                <ul>
-                  <li><a class="copypostlink" ><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
+                  <li><a class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
                   <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                   <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
                   <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
@@ -480,18 +511,20 @@
                </div>
              </div> 
 
+
+
              <div class="post" title="Facebook Tricks">
                <figure>
-                 <a href="#Facebook_tricks"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
+                 <a href="facebookTricks.html"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
                   <figcaption>Facebook Tricks</figcaption>
                </figure>
                <div class="text-content">
-                  <h2><a class='postLink' href="#facebook_tricks2">Facebook Tricks,Facebook Tricks,Facebook Tricks Facebook Tricks Facebook Tricks</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
+                  <h2><a class='postLink' href="facebookTricks.html">Top Best Tricks For Facebook !!</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
                   <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                 <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-              <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-                 <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-                 <h4 id="readmore" title="Readmore" >Readmore</h4>   
+                 <h5 class="publisher"><i class="fa fa-user"></i> <a href="admin.html">Md Mijanur Rahaman</a></h5>
+              <h5 class="published"><i class="fa fa-calendar"></i> <a href="archive.html">1 november 2020</a></h5>
+                 <h5 class="category"><i class="fa fa-tag"></i><a href="category.html">Facebook</a></h5>
+                 <h4 id="readmore" title="Readmore" ><a href="facebookTricks.html">Readmore</a></h4>   
                  <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
                </div>
                   <div class="sharediv">
@@ -504,19 +537,21 @@
                   </ul>
                   </div>
                 </div> 
-        
+
+
+
                 <div class="post" title="Facebook Tricks">
                   <figure>
-                    <a href="#Facebook_tricks"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
+                    <a href="facebookTricks.html"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
                      <figcaption>Facebook Tricks</figcaption>
                   </figure>
                   <div class="text-content">
-                     <h2><a class='postLink' href="#facebook_tricks">Facebook Tricks,Facebook Tricks,Facebook Tricks Facebook Tricks Facebook Tricks</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
+                     <h2><a class='postLink' href="facebookTricks.html">Top Best Tricks For Facebook !!</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
                      <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                    <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-                 <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-                    <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-                    <h4 id="readmore" title="Readmore" >Readmore</h4>   
+                    <h5 class="publisher"><i class="fa fa-user"></i> <a href="admin.html">Md Mijanur Rahaman</a></h5>
+                 <h5 class="published"><i class="fa fa-calendar"></i> <a href="archive.html">1 november 2020</a></h5>
+                    <h5 class="category"><i class="fa fa-tag"></i><a href="category.html">Facebook</a></h5>
+                    <h4 id="readmore" title="Readmore" ><a href="facebookTricks.html">Readmore</a></h4>   
                     <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
                   </div>
                      <div class="sharediv">
@@ -530,23 +565,25 @@
                      </div>
                    </div> 
 
+
+
                    <div class="post" title="Facebook Tricks">
                      <figure>
-                       <a href="#Facebook_tricks"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
+                       <a href="facebookTricks.html"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
                         <figcaption>Facebook Tricks</figcaption>
                      </figure>
                      <div class="text-content">
-                        <h2><a class='postLink' href="#facebook_tricks">Facebook Tricks,Facebook Tricks,Facebook Tricks Facebook Tricks Facebook Tricks</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
+                        <h2><a class='postLink' href="facebookTricks.html">Top Best Tricks For Facebook !!</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
                         <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                       <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-                    <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-                       <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-                       <h4 id="readmore" title="Readmore" >Readmore</h4>   
+                       <h5 class="publisher"><i class="fa fa-user"></i> <a href="admin.html">Md Mijanur Rahaman</a></h5>
+                    <h5 class="published"><i class="fa fa-calendar"></i> <a href="archive.html">1 november 2020</a></h5>
+                       <h5 class="category"><i class="fa fa-tag"></i><a href="category.html">Facebook</a></h5>
+                       <h4 id="readmore" title="Readmore" ><a href="facebookTricks.html">Readmore</a></h4>   
                        <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
                      </div>
                         <div class="sharediv">
                         <ul>
-                           <li><a  class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
+                           <li><a class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
                            <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                            <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
                            <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
@@ -555,23 +592,25 @@
                         </div>
                       </div> 
 
+
+
                       <div class="post" title="Facebook Tricks">
                         <figure>
-                          <a href="#Facebook_tricks"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
+                          <a href="facebookTricks.html"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
                            <figcaption>Facebook Tricks</figcaption>
                         </figure>
                         <div class="text-content">
-                           <h2><a class='postLink' href="#facebook_tricks">Facebook Tricks,Facebook Tricks,Facebook Tricks Facebook Tricks Facebook Tricks</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
+                           <h2><a class='postLink' href="facebookTricks.html">Top Best Tricks For Facebook !!</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
                            <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                          <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-                       <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-                          <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-                          <h4 id="readmore" title="Readmore" >Readmore</h4>   
+                          <h5 class="publisher"><i class="fa fa-user"></i> <a href="admin.html">Md Mijanur Rahaman</a></h5>
+                       <h5 class="published"><i class="fa fa-calendar"></i> <a href="archive.html">1 november 2020</a></h5>
+                          <h5 class="category"><i class="fa fa-tag"></i><a href="category.html">Facebook</a></h5>
+                          <h4 id="readmore" title="Readmore" ><a href="facebookTricks.html">Readmore</a></h4>   
                           <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
                         </div>
                            <div class="sharediv">
                            <ul>
-                              <li><a  class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
+                              <li><a class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
                               <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                               <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
                               <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
@@ -581,23 +620,24 @@
                          </div> 
 
 
+
                          <div class="post" title="Facebook Tricks">
                            <figure>
-                             <a href="#Facebook_tricks"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
+                             <a href="facebookTricks.html"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
                               <figcaption>Facebook Tricks</figcaption>
                            </figure>
                            <div class="text-content">
-                              <h2><a class='postLink' href="#facebook_tricks">Facebook Tricks,Facebook Tricks,Facebook Tricks Facebook Tricks Facebook Tricks</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
+                              <h2><a class='postLink' href="facebookTricks.html">Top Best Tricks For Facebook !!</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
                               <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                             <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-                          <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-                             <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-                             <h4 id="readmore" title="Readmore" >Readmore</h4>   
+                             <h5 class="publisher"><i class="fa fa-user"></i> <a href="admin.html">Md Mijanur Rahaman</a></h5>
+                          <h5 class="published"><i class="fa fa-calendar"></i> <a href="archive.html">1 november 2020</a></h5>
+                             <h5 class="category"><i class="fa fa-tag"></i><a href="category.html">Facebook</a></h5>
+                             <h4 id="readmore" title="Readmore" ><a href="facebookTricks.html">Readmore</a></h4>   
                              <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
                            </div>
                               <div class="sharediv">
                               <ul>
-                                 <li><a  class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
+                                 <li><a class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
                                  <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                                  <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
                                  <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
@@ -605,82 +645,18 @@
                               </ul>
                               </div>
                             </div> 
+        
 
+                   
 
-                            <div class="post" title="Facebook Tricks">
-                              <figure>
-                                <a href="#Facebook_tricks"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
-                                 <figcaption>Facebook Tricks</figcaption>
-                              </figure>
-                              <div class="text-content">
-                                 <h2><a class='postLink' href="#facebook_tricks">Facebook Tricks,Facebook Tricks,Facebook Tricks Facebook Tricks Facebook Tricks</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
-                                 <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                                <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-                             <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-                                <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-                                <h4 id="readmore" title="Readmore" >Readmore</h4>   
-                                <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
-                              </div>
-                                 <div class="sharediv">
-                                 <ul>
-                                    <li><a  class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
-                                 </ul>
-                                 </div>
-                               </div>                  
-                            <div class="post" title="Facebook Tricks">
-                              <figure>
-                                <a href="#Facebook_tricks"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
-                                 <figcaption>Facebook Tricks</figcaption>
-                              </figure>
-                              <div class="text-content">
-                                 <h2><a class='postLink' href="#facebook_tricks">Facebook Tricks,Facebook Tricks,Facebook Tricks Facebook Tricks Facebook Tricks</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
-                                 <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                                <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-                             <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-                                <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-                                <h4 id="readmore" title="Readmore" >Readmore</h4>   
-                                <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
-                              </div>
-                                 <div class="sharediv">
-                                 <ul>
-                                    <li><a  class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
-                                 </ul>
-                                 </div>
-                               </div> 
+ 
 
-                               
-                            <div class="post" title="Facebook Tricks">
-                              <figure>
-                                <a href="#Facebook_tricks99"> <img src="images/facebook-tricks.png" alt="Facebook Tricks"></a>
-                                 <figcaption>Facebook Tricks</figcaption>
-                              </figure>
-                              <div class="text-content">
-                                 <h2><a class='postLink' href="#facebook_tricks99">Facebook Tricks,Facebook Tricks,Facebook Tricks Facebook Tricks Facebook Tricks</a></h2>  <span id="views"><i class="fa fa-eye"></i> 1005</span> 
-                                 <p class="fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                                <h5 class="publisher"><i class="fa fa-user"></i> Md Mijanur Rahaman</h5>
-                             <h5 class="published"><i class="fa fa-calendar"></i> 19 september 2020</h5>
-                                <h5 class="category"><i class="fa fa-tag"></i> Facebook</h5>
-                                <h4 id="readmore" title="Readmore" >Readmore</h4>   
-                                <button class="share" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></button> 
-                              </div>
-                                 <div class="sharediv">
-                                 <ul>
-                                    <li><a  class="copypostlink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
-                                 </ul>
-                                 </div>
-                               </div> 
+            
+        
+
+                  
+
+           
 
  
 
@@ -733,11 +709,12 @@
 <div class="sidebox">
    <h2>Images Slider</h2><hr>
  
-   <div class="img-div">
+   <div class="imagesSliderMR">
       <img src="img/1.png"">
       <div onclick="prev()" class="slideButton1 button"></div>
       <div onclick="next()" class="slideButton2 button"></div>
  </div>
+ 
 </div>
   
 <div class="sidebox">
@@ -875,17 +852,6 @@ Read more <a href='/p/about.html'>About MR Laboratory. </a>
 </div>
 </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
-
     </div>  
    </div> 
    <div class="draggableDiv" >
@@ -905,15 +871,28 @@ Read more <a href='/p/about.html'>About MR Laboratory. </a>
       <button>OK</button>
    </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <!-- <script src="jquery.min.js"></script> -->
    <script>
-          // image slider 
-var photos = ["img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/6.png","img/7.png","img/8.png"];
+      // image slider 
+      var Sliderphotos = ['img/1.png','img/2.png','img/3.png','img/4.png','img/5.png'];
       var webUrl ='https://www.mrlaboratory.com';
       var dissableCopyText = false;
       var timeFmt = 12;
       var clickheartjs =true;
+      var notifyIcon = true;
    </script>
     <script src="script.js"></script>
 <!-- <script src="encripted.js"></script> -->

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <!-- 
+   You can select default theme and mode 
+   <html lang="en"  data-theme="dark">
+   <html lang="en"  data-theme="gradient">
+   <html lang="en" data-mode="grid"> 
+      -->
+
+<head>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - Template Design</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap' rel='stylesheet'/>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+<!-- 
+   >> instranction
+   if went to use redirect link 
+   You can use the .redirect class on your a tag 
+   
+   
+   -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+<body>
+ <div class="centerpreloder">
+    <img src="img/mr.png" alt="">
+      <div id="preloader" class="light">
+        <div class="outer">
+          <!-- Google Chrome -->
+          <div class="infinityChrome">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+      
+          <!-- Safari and others -->
+          <div class="infinity">
+            <div>
+              <span></span>
+            </div>
+            <div>
+              <span></span>
+            </div>
+            <div>
+              <span></span>
+            </div>
+          </div>
+          <!-- Stuff -->
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-outer">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div></div>
+ 
+   
+
+
+
+
+    <div class="main-container">
+
+        <div class="nav-bar1">
+            <ul>
+                <li><a class="ripple" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a class="ripple" href="#"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a class="ripple" href="#"><i class="fa fa-envelope"></i> Contact</a></li>
+                <li><a class="ripple" href="#"><i class="fa fa-question"></i> FAQ</a></li>
+                <li><a class="ripple" href="#"><i class="fa fa-lock"></i> Policy</a></li>
+                <li><a class="ripple" href="#"><i class="fa fa-sitemap"></i> Sitemap</a></li>
+                <li><a class="ripple" href="#"><i class="fa fa-search"></i> Search</a></li>
+                <li><a class="ripple" href="#"><i class="fa fa-fire"></i> Trending</a></li>
+                
+                
+            </ul>
+         
+         </div>
+         <div class="nav-bar2"   >
+         <div class="left">
+            <div class="togglebutton">
+                <div class="circle icon">
+        <span class="line top"></span>
+        <span class="line middle"></span>
+        <span class="line bottom"></span>
+                </div>
+            </div>
+         <a class="homebtn" href="#">Home</a>
+         <form action="">
+            <input placeholder="Search..." type="text">
+            <button><i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+         </form>
+         
+         </div>
+         <div class="right">
+            <div class="todayDiv">
+               <p class="time">10:00:00</p>
+               <p class="date">Octobar 7 2020</p>
+            </div>
+                 
+                <div class="notificationbutton"><i class="fa fa-comments"></i></div>
+                <div class="moremenu6button">
+                  <svg viewBox="0 0 48 48"><path d="M8 16h8V8H8v8zm12 24h8v-8h-8v8zM8 40h8v-8H8v8zm0-12h8v-8H8v8zm12 0h8v-8h-8v8zM32 8v8h8V8h-8zm-12 8h8V8h-8v8zm12 12h8v-8h-8v8zm0 12h8v-8h-8v8z"></path></svg>
+                </div>
+               <div class="regbutton"><img title='Registration' src="https://graph.facebook.com/mdmijanurrahaman.mr/picture?type=large" alt=""></div>
+         </div>
+               <div class="reginfoMenu">
+              
+               <div class="userinfo">
+                  <img src="img/Md Mijanur Rahaman 8.png" class="userImg" alt="Admin">
+                  <p class="userName">Md Mijanur Rahaman</p>
+                  <h4 class="UserEmail">Admin@mrlaboratory.com</h4>    
+               </div>
+               <div class="useraccount">
+                  <ul>
+                     <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+                     <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i> Youtube</a></li>
+                     <li><a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Website</a></li>
+                     <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                     <li><a href="#"><i class="fa fa-github"></i> Github</a></li>
+                     
+                    
+                  </ul>
+               </div>
+   
+               </div>
+             <div class="notifydiv">
+               <div class="commenterDetails">
+                  <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
+                  <div class="commenTex">
+                     <h4>Md Mijanur Rahaman</h4>
+                     <p>Comment text - Best Tutorial</p></div>
+                                 </div>  
+
+               <div class="commenterDetails">
+<div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
+<div class="commenTex">
+   <h4>Md Mijanur Rahaman</h4>
+   <p>Best Tutorial</p></div>
+               </div>
+               <div class="commenterDetails">
+                  <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
+                  <div class="commenTex">
+                     <h4>Md Mijanur Rahaman Md Mijanur Rahaman Md Mijanur Rahaman Md Mijanur Rahaman</h4>
+                     <p>Best Tutorial Md Mijanur Rahaman Md Mijanur Rahaman Md Mijanur Rahaman Md Mijanur Rahaman Md Mijanur Rahaman Md Mijanur Rahaman Md Mijanur Rahaman</p></div>
+                                 </div>
+
+                                 <div class="commenterDetails">
+                                    <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
+                                    <div class="commenTex">
+                                       <h4>Md Mijanur Rahaman</h4>
+                                       <p>Best Tutorial</p></div>
+                                                   </div>
+
+                                                   <div class="commenterDetails">
+                                                      <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
+                                                      <div class="commenTex">
+                                                         <h4>Md Mijanur Rahaman</h4>
+                                                         <p>Best Tutorial</p></div>
+                                                                     </div>
+
+                                                                     <div class="commenterDetails">
+                                                                        <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
+                                                                        <div class="commenTex">
+                                                                           <h4>Md Mijanur Rahaman</h4>
+                                                                           <p>Best Tutorial</p></div>
+                                                                                       </div>     <div class="commenterDetails">
+                                                                                          <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
+                                                                                          <div class="commenTex">
+                                                                                             <h4>Md Mijanur Rahaman</h4>
+                                                                                             <p>Best Tutorial</p></div>
+                                                                                                         </div> 
+                                                                     <div class="commenterDetails">
+                                                                        <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
+                                                                        <div class="commenTex">
+                                                                           <h4>Md Mijanur Rahaman</h4>
+                                                                           <p>Best Tutorial</p></div>
+                                                                                       </div>
+
+                                                                                       <div class="commenterDetails">
+                                                                                          <div class="averter"><img src="img/Md Mijanur Rahaman 1.png" alt="Averter"></div>
+                                                                                          <div class="commenTex">
+                                                                                             <h4>Md Mijanur Rahaman</h4>
+                                                                                             <p>Best Tutorial</p></div>
+                                                                                                         </div>
+
+.
+
+
+
+
+             </div>
+             <div class="moremenudiv">
+               
+<ul>
+   <li><a href="#"><i class="fa fa-envelope"></i>   Home</a></li>
+   <li><a href="#"><i class="fa fa-user"></i>   About us</a></li>
+   <li><a href="#"><i class="fa fa-envelope"></i>   Contact us</a></li>
+   <li><a href="#"><i class="fa fa-envelope"></i>   Privacy Policy</a></li>
+   <li><a href="#"><i class="fa fa-envelope"></i>   Tarms and conditions</a></li>
+   <li><a href="#"><i class="fa fa-question"></i>   FAQ</a></li>
+   <li><a href="#"><i class="fa fa-envelope"></i>   Disclimer</a></li>
+</ul>
+
+
+
+
+             </div>
+         </div>
+           <div class="side-cover"></div>
+            <div class="sideMenu">
+                <!-- accordion -->
+<div class="MSearch">
+  <form action="">
+     <input class="msearchbox" placeholder="Search..." type="search"/>
+     <button class="msearchbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+  </form>
+
+</div>
+                <div class="accordian">
+             
+                  <div class="accbtn ripple"><span class="acclog"><i class="fas fa-edit"></i></span> Personalized<p class="accsym">+</p></div>
+                  <div class="acctext acctextt">
+                     <ul>
+                        <li>Dark Theme  <p class="accmodebtn"><input class="buttoninput" type="checkbox"/></p></li>
+                        <li>Gradient Theme  <p class="accmodebtn"><input class="buttoninput"  type="checkbox"/></p></li>
+                        <li>Grid mode  <p class="accmodebtn"><input class="buttoninput" type="checkbox"/></p></li>
+                        <li>Notification <p class="accmodebtn"><input class="buttoninput themeTransperent" type="checkbox"/></p></li>
+                        <li>Custom Mode<p class="accmodebtn"><input class="buttoninput themeGradient" type="checkbox"/></p></li>
+                   
+                     </ul>
+
+                  </div>
+              
+                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-tags"></i></span>Populer Category ?<p class="accsym">+</p></div>
+                  <div class="acctext">
+
+                     <ul>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                        <li><a href="#">Facebook Tricsk</a></li>
+                     </ul>
+                  </div>
+                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-tags"></i></span>All Category ?<p class="accsym">+</p></div>
+                  <div class="acctext">
+
+                     <ul>
+                        <li class='ripple'>
+                        <a href='/p/facebook-tricks.html' title='Facebook Tricks'>
+                        <span class='label-name'>Facebook Tricks</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/blogger-tutorial.html' title='Blogger Tutorial'>
+                        <span class='label-name'>Blogger Tutorial</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/online-earning.html' title='Online Earning'>
+                        <span class='label-name'>Online Earning</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/computer-tricks.html' title='Computer Tricks'>
+                        <span class='label-name'>Computer Tricks</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/youtube-marketing.html' title='Youtube Marketing'>
+                        <span class='label-name'>Youtube Marketing</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/google-adsense-tutorial.html' title='Google Adsense Tutorial'>
+                        <span class='label-name'>Google Adsense Tutorial</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/bangla-tutorial.html' title='Bangla Tutorial'>
+                        <span class='label-name'>Bangla Tutorial</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/ethical-hacking.html' title='Ethical Hacking'>
+                        <span class='label-name'>Ethical Hacking</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/web-developing.html' title='Web Developing'>
+                        <span class='label-name'>Web Developing</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/digital-marketing.html' title='Digital Marketing'>
+                        <span class='label-name'>Digital Marketing</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/seo-tutorial.html' title='SEO Tutorial'>
+                        <span class='label-name'>SEO Tutorial</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/motivational-speech.html' title='Motivational Speech'>
+                        <span class='label-name'>Motivational Speech</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/educational-article.html' title='Educational Article'>
+                        <span class='label-name'>Educational Article</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/video-editing.html' title='Video Editing'>
+                        <span class='label-name'>Video Editing</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        <li class='ripple'>
+                        <a href='/p/photo-editing.html' title='Photo Editing'>
+                        <span class='label-name'>Photo Editing</span>
+                        <span class='label-count'>99+</span>
+                        </a>
+                        </li>
+                        </ul>
+                  </div>
+                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-link"></i></span>Link List<p class="accsym">+</p></div>
+                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
+              
+                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-link"></i></span>Social Media Profile<p class="accsym">+</p></div>
+                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
+              
+                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-bookmark"></i></span>Services<p class="accsym">+</p></div>
+                  <div class="acctext">
+                  <ul>
+                     <li>
+                        <a href='/p/css-gradient-animator.html' title='CSS Gradient Animator'>
+                        CSS Gradient Animator
+                        <span class='label-count'>1</span>
+                        </a>
+                        </li>
+                        <li >
+                        <a href='/p/blogger-professional-templates.html' title='Buy Template'>
+                        <span class='label-name'>Buy This Template</span>
+                        <span class='label-count'>100</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href='/p/submit-sitemaps.html' title='submit your sitemap to Google Search Console'>
+                        <span class='label-name'>Submit Sitemaps</span>
+                        <span class='label-count'>99</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href='/p/google-serp.html' title='Search Engine Results Pages (also known as “SERPs” or “SERP”)'>
+                        <span class='label-name'>Google SERP</span>
+                        <span class='label-count'>1</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href='/robots.txt' title='Crawlability Test Robots.txt'>
+                        <span class='label-name'>Test Robots.txt</span>
+                        <span class='label-count'>1</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href='/p/alexa-rank-checker-free.html' title='Alexa Rank Checker Tools Free'>
+                        <span class='label-name'>Alexa Rank Checker</span>
+                        <span class='label-count'>1</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href='https://search.google.com/test/mobile-friendly?id=IJO9z1j2_brxp0UDHLSpGQ' title='Mobile-Friendly Test'>
+                        <span class='label-name'>Mobile Support Test</span>
+                        <span class='label-count'>1</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href='/p/ndexed-pages.html' title='Indexed Pages Checker Google And Bing'>
+                        <span class='label-name'>Indexed Pages</span>
+                        <span class='label-count'>1</span>
+                        </a>
+                        </li>
+                        <li >
+                        <a href='/p/crawlability-test.html' title='Crawlability Test'>
+                        <span class='label-name'>Crawlability Test</span>
+                        <span class='label-count'>1</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href='/p/calculator.html' title='Calculator'>
+                        <span class='label-name'>Calculator</span>
+                        <span class='label-count'>1</span>
+                        </a>
+                        </li>
+                  </ul>
+                  </div>
+              
+               
+                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-heart"></i></span>Services<p class="accsym">+</p></div>
+                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
+                
+
+                  <div class="accbtn ripple"><span class="acclog"><i class="fa fa-shopping-bag"></i></span>Product<p class="accsym">+</p></div>
+                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
+                  <div class="acctext">I am Md Mijanur Rahaman. Founder & CEO of MR Laboratory. I am webdeveloper , Youtuber and blogger.</div>
+                
+             
+                  </div>
+                
+
+
+            </div>
+    <header>
+                 
+
+   
+    </header>
+
+
+
+      
+    
+
+
+      <section class="main-content">
+   <article>
+  <div class="adminDetals">
+     <div class="adminimg">
+         <img src="img/mr4.png" alt="">
+         <div class="rounder1">10</div>
+      </div>
+    
+  </div>
+
+
+
+            
+        
+
+                  
+
+           
+
+ 
+
+
+  
+                              </article>
+   <aside>
+
+<div class="sidebox">
+   <h2>Trending</h2><hr>
+   
+    <div class="post2">
+<div class="left"><img src="tech/1.png" alt="Technology"></div>
+<h5>Technology gadget,</h5>
+   </div>
+   <div class="post2">
+      <div class="left"><img src="tech/2.png" alt="Technology"></div>
+      <h5>Technology gadget,</h5>
+         </div>
+
+         <div class="post2">
+            <div class="left"><img src="tech/3.png" alt="Technology"></div>
+            <h5>Technology gadget,</h5>
+               </div>
+               <div class="post2">
+                  <div class="left"><img src="tech/4.png" alt="Technology"></div>
+                  <h5>Technology gadget,</h5>
+                     </div>
+                     <div class="post2">
+                        <div class="left"><img src="tech/5.png" alt="Technology"></div>
+                        <h5>Technology gadget,</h5>
+                           </div>
+</div>
+
+
+
+
+
+<div class="sidebox">
+   <h2>Images Slider</h2><hr>
+ 
+   <div class="imagesSliderMR">
+      <img src="img/1.png"">
+      <div onclick="prev()" class="slideButton1 button"></div>
+      <div onclick="next()" class="slideButton2 button"></div>
+ </div>
+ 
+</div>
+  
+<div class="sidebox">
+   <h2>Video </h2><hr>
+   <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/cEpTOyjlOnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+</aside>
+</section>
+<footer>
+<div class="footer">
+<div class="footerTop">
+   <div class="left">
+
+      <!-- If you use the free version  Please do not remove any elements inside the adsbox.. -->
+<div class="adsbox">
+  <a target="_blank" href="https://www.facebook.com/mrlaboratory"><img src="img/1.png" alt="Ads box"></a>
+</div>
+
+   </div>
+   <div class="right">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-youtube"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-pinterest"></a>
+      <a href="#" class="fa fa-snapchat-ghost"></a>
+      <a href="#" class="fa fa-skype"></a>
+      <a href="#" class="fa fa-android"></a>
+      <a href="#" class="fa fa-dribbble"></a>
+      <a href="#" class="fa fa-vimeo"></a>
+      <a href="#" class="fa fa-tumblr"></a>
+      <a href="#" class="fa fa-vine"></a>
+      <a href="#" class="fa fa-foursquare"></a>
+      <a href="#" class="fa fa-stumbleupon"></a>
+      <a href="#" class="fa fa-flickr"></a>
+      <a href="#" class="fa fa-yahoo"></a>
+      <a href="#" class="fa fa-reddit"></a>
+      <a href="#" class="fa fa-rss"></a>
+      <a href="#" class="fab fa-facebook-messenger"></a>
+
+     
+      </div>
+</div>
+<div class="footerAbout">
+ <div class="centerDiv">
+    <div class="loader">
+     <img src="img/Md Mijanur Rahaman 2.png" alt="Md Mijanur Rahaman">
+    </div>
+    <h3>MR Laboratory</h3>
+<p>    Welcome to our website <a href='/'>MR Laboratory</a>. We Have <b style='color:red;'><span>41</span></b> Authors to write an article.
+We are regularly sharing some best content.
+All kind of Internet Technology tricks are shared on our website. 
+We have <b style='color:red;'><span>1505</span></b> articles and <b style='color:red;'><span>1000+</span></b> comments. More than <b style='color:red;'><span>2100+</span></b> people visit our website regularly.
+Read more <a href='/p/about.html'>About MR Laboratory. </a>
+
+   You can also write to our website if you wish. 
+
+   Join Our Community for writing on our website . </p>
+
+
+   <button class="contact">Contact Form <i class="fas fa-envelope"></i></button>
+   <button class="about">Important page <i class="fas fa-file"></i></button>
+  
+ </div>
+
+ <div class="windowbox contactdiv">
+<button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+<h4>Contact Form</h4>
+<form action="">
+<input required type="text" placeholder="Name">
+<input required type="Email" placeholder="Email">
+<textarea required placeholder="Your Text..." name="" id="" cols="23" rows="10"></textarea>
+<input type="submit" name="" id="">
+</form>
+
+ </div>
+ <div class="windowbox aboutdiv">
+   <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+<ul>
+   <li><a href="#">Privacy Policy</a></li>
+   <li><a href="#">Tarms & conditions</a></li>
+   <li><a href="#">How to find us</a></li>
+   <li><a href="#">How to join us</a></li>
+   <li><a href="#">Buy This Theme</a></li>
+   <li><a href="#">Contact us</a></li>
+ 
+</ul>
+ </div>
+</div>
+
+<div class="footerMidle">
+<div class="linklist">
+   <h3>Author List <i class="fa fa-book" aria-hidden="true"></i></h3>
+   <ol class="Author">
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
+
+   </ol>
+</div>
+<div class="linklist">
+   <h3>Member List <i class="fa fa-book" aria-hidden="true"></i></h3>
+   <ol class="Member">     
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman </i></a></li>
+      <li><a href="#"><i class="fa fa-user"> Md Mijanur Rahaman</i></a></li>
+   </ol>
+</div>
+</div>
+<div class="footerBottom">
+<div class="credit">
+<!-- If you use the free version  Please do not remove developer credit.. -->
+ <p> &copy; 2020 <a href="#" class="copyright">MR Laboratory</a> ।। <a href="#" class="copyrightMR"> Theme Created  MR Laboratory</a></p> 
+
+</div>
+</div>
+</div>
+</footer>
+    </div>  
+   </div> 
+   <div class="draggableDiv" >
+      <div class="dragbtn"><i class="fa fa-bell"></i></div>
+      <div class="dragdiv">
+        <h5 align="center">Notification</h5>
+         <ul>       
+         </ul>
+      </div>
+      <div class="dragnotify"><p></p></div>
+   </div>
+<button class="scrollBtn" onclick="topFunction()"><i class="fas fa-arrow-up"></i></button>
+<div class="alertbox">
+   <div class="inside">
+      <h2>Alert !!!</h2>
+      <p id="alerttext"></p>
+      <button>OK</button>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!-- <script src="jquery.min.js"></script> -->
+   <script>
+      // image slider 
+      var Sliderphotos = ['img/1.png','img/2.png','img/3.png','img/4.png','img/5.png'];
+      var webUrl ='https://www.mrlaboratory.com';
+      var dissableCopyText = false;
+      var timeFmt = 12;
+      var clickheartjs =true;
+      var notifyIcon = true;
+   </script>
+    <script src="script.js"></script>
+<!-- <script src="encripted.js"></script> -->
+
+</body>
+</html>
+

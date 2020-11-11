@@ -1,0 +1,1 @@
+alert('script1 js worled');
