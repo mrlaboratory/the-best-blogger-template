@@ -3,6 +3,9 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
 .centerpreloder {
     position: fixed;
     z-index: 10000;
@@ -272,11 +275,9 @@ box-sizing:border-box;
 
 
 /* for time  */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
-html {
-    scroll-behavior: smooth;
-  }
-  
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+   */
 
 
 
@@ -297,6 +298,7 @@ html {
     --backg1:#ebecf0;
     --bgcolor2:#ebecf0;
     --shadow1: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    
     --shadow1hover : inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
     --fade:linear-gradient(to right, rgba(255, 255, 255, 0), var(--bgcolor) 50%);
     --main-bgcolor: #3285cf; 
@@ -517,6 +519,8 @@ margin-right:30px;
     float:left;
     position: absolute;
     width:50%;
+    height: 100%;
+    top:0px;
     }
     
 
@@ -531,7 +535,7 @@ cursor:pointer;
 }
 .homebtn{
     width: 60px;
-    height: 41px;
+    height: 38px;
     text-decoration: none;
     padding: 10px;
     top: 0px;
@@ -539,6 +543,7 @@ cursor:pointer;
     border-radius: 10px;
     color: var(--blackwhite);
     box-shadow: var(--shadow1);
+    transition: all .5s;
 
 }
 .homebtn:hover{
@@ -563,7 +568,6 @@ transition: all .5s;
 }
 
 .nav-bar1 ul li a:hover{
-
 box-shadow: var(--shadow1hover);
 
 }
@@ -597,9 +601,9 @@ aside{
     top:50px;
     position:sticky;
     float:left;
- 
-  height: 25vh;
-  display:table;
+    height: 25vh;
+    display:table;
+  
     
 
 }
@@ -652,7 +656,7 @@ background:var(--main-sbgcolor);
   
 }
 .post:hover{
-    box-shadow: var(--shadow1hover);
+    /* box-shadow: var(--shadow1hover); */
 
 }
 
@@ -767,7 +771,7 @@ img:hover{
 }
 
 
-.post h2 {
+.post .text-content h2 {
     color: var(--blackwhite);
     margin: 0 0 7px 0;
     overflow: hidden;
@@ -845,10 +849,11 @@ opacity:70%;
     display: inline-block;
     border-radius: 50%;
     box-shadow: var(--shadow1);
-    padding: 10px;
+    padding: 7px;
     cursor: pointer;
     margin-left: 20px;
     margin-right: 10px;
+    top: 3px;
     
     
 
@@ -968,7 +973,7 @@ display:none;
     
     
     .togglebutton:hover{
-box-shadow: var(--shadow1hover);
+/* box-shadow: var(--shadow1hover); */
 transition: .5s all;
 
     }
@@ -1061,11 +1066,11 @@ transition: .5s all;
             }
             .reginfoMenu {
                 width: 260px;
-                height: 279px;
+                height: 283px;
                 background: var(--bgcolor);
                 position: absolute;
                 right: 25px;
-                top: 40px;
+                top: 37px;
                 box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.4);
                 border-radius: 0 0 4px 4px;
                 display: none;
@@ -1094,7 +1099,7 @@ transition: .5s all;
     background: var(--bgcolor);
     position: absolute;
     right: 73px;
-    top: 40px;
+    top: 37px;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.4);
     border-radius: 0 0 4px 4px;
     display: none;
@@ -1109,8 +1114,6 @@ transition: .5s all;
         .notifydiv::-o-scrollbar {
             display: none;}  
           
-
-
   .moremenu6button{
     width: 34px;
     height: auto;
@@ -1118,19 +1121,23 @@ transition: .5s all;
     position: absolute;
     cursor: pointer;
   }
-
   .moremenu6button svg {
     fill: var(--blackwhite);
     
 }
+.moremenu6button i.fa.fa-th {
+    font-size: 26px;
+    padding: 5px;
+    color: var(--blackwhite);
+}
 
 .moremenudiv{
     width: 260px;
-    height: 280px;
+    height: 284px;
     background: var(--bgcolor);
     position: absolute;
     right: 123px;
-    top: 40px;
+    top: 39px;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.4);
     border-radius: 0 0 4px 4px;
     display:none;
@@ -1163,7 +1170,7 @@ transition: .5s all;
 }
 .userinfo .userName {
     float: right;
-    font-size: 21px;
+    font-size: 18px;
     right: 9px;
     position: absolute;
     top: 14px;
@@ -1174,6 +1181,7 @@ transition: .5s all;
     position: absolute;
     right: 16px;
     top: 39px;
+    font-size: 13px
    
 }
 
@@ -1296,7 +1304,7 @@ border-top:1px solid var(--main-bgcolor);
     }
 
     .accbtn .acclog {
-        width: 30px;
+        width: 29px;
         height: 30px;
         background: var(--lowwhiteblack);
         border-radius: 50%;
@@ -1307,6 +1315,8 @@ border-top:1px solid var(--main-bgcolor);
         /* color: var(--bgcolorwhite); */
     }
     .notifydiv .averter{
+        background: url(img/commentbg.png) no-repeat scroll center;
+        background-size: cover;
         height: 50px;
         width: 50px;
         border-radius: 50%;
@@ -1413,32 +1423,25 @@ height:auto;
 background:var(--Obgcolor);
 color: var(--blackwhite);
 transition:all .5s;
-
-
     } 
     /* customize side scrollbar  */
     ::-webkit-scrollbar {
-        width: 15px;
-        
+        width: 10px;
+        cursor: pointer; 
       }
-      
       ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px grey; 
+        /* box-shadow: inset 0 0 5px grey;  */
         border-radius: 10px;
-       
+        background: transparent;
+        /* background: var(--bgcolor); */
       }
-       
       ::-webkit-scrollbar-thumb {
         background: var(--main-bgcolor); 
         border-radius: 10px;
-        
+        cursor: pointer;  
       }
-      
       ::-webkit-scrollbar-thumb:hover {
-        background-color: var(--main-bgcolor); 
         opacity: 0.8;
-       
-       
       }
    
   .acctext a {
@@ -1472,7 +1475,7 @@ list-style-type: none;
 
  .nav-bar2 .left form {
     display: inline-block;
-    width: 70%;
+    width: 65%;
     height: 41px;
     position: absolute;
     top:0;
@@ -1480,8 +1483,8 @@ list-style-type: none;
 }
 .nav-bar2 .left input[type="text"] {
     width: 60%;
-    height: 41px;
-    top: 0;
+    height: 37px;
+    top: 2px;
     right: -15px;
     position: absolute;
     display: inline-block;
@@ -1507,11 +1510,11 @@ color:var(--blackwhite);
 
 .nav-bar2 .left button {
     display: inline-block;
-    width: 40px;
-    height: 41px;
+    width: 37px;
+    height: 37px;
     position: absolute;
     right: -60px;
-    top:0;
+    top:1px;
     cursor:pointer;
     outline:none;
     border:none;  
@@ -1655,36 +1658,7 @@ color: var(--blackwhite);
    box-shadow: var(--shadow1hover);
 }
 
-  @media screen and (max-width: 800px){
-    article{
-        width:100%;
-    }
-    
-    aside{
-        width:100%;
-    }
-    .nav-bar1{
-    display:none;
-    
-    }
-    .sideMenu{
-        top:unset;
-    }
-   .footerTop .right{
-        width:100%;}
-        .footerTop .left{
-            width:100%;} 
-            .nav-bar2 .left form{
-                display: none;
-            }
-            .nav-bar2{
-                top:0;
-        
-            }
 
-
-    
-    }
     .footerBottom .credit {
 text-align: center;
 
@@ -2087,8 +2061,9 @@ left: 0;
 }
 .footerAbout .windowbox{
     width: 220px;
-    height: 300px;
+    height: 330px;
     position: absolute;
+    overflow: hidden;
     border-radius: 5px;
     box-shadow: var(--shadow1);
     background: var(--bgcolor);
@@ -2211,7 +2186,7 @@ position: relative;
 }
 .sharediv{
     width: 150px;
-    height: 150px;
+    height: 180px;
     background: var(--bgcolor);
     position: absolute;
     top: var(--top);
@@ -2270,17 +2245,19 @@ ul{
     width: 150px;
     height: 100%;
     top: 0;
-    padding: 5px;
+   
 }
 .todayDiv .time{
+    padding-top: 4px;
     font-size: 22px;
     text-align: center;
     font-weight: bold;
     font-family: 'Teko', sans-serif;
 }
 .todayDiv .date{
-    font-size: 10px;
+       font-size: 10px;
     text-align: center;
+    height: 18px;
 }
 .adsbox{
     width:100%;
@@ -2457,6 +2434,188 @@ position: relative;
 
 }
 
+.customodediv {
+    width: 100%;
+    height: 230px;
+    border-radius: 5px;
+    position: relative;
+    display: none;
+  
+}
+
+.footerup{
+    width: 100%;
+    height: auto;
+    display: table;
+    color: var(--blackwhite);
+}
+.footerup .left{
+    width: 50%;
+    height: auto;
+    float: left;
+    color: var(--blackwhite);
+    padding: 15px;
+    display: table;
+}
+.footerup .right{
+    width: 50%;
+    height: auto;
+    float: left;
+    padding: 10px;
+    display: table;
+}
+.recentpost{
+    width: 100%;
+    height: 255px;
+    overflow: hidden;
+}
+.recentpost .rcp{
+    width: 30%;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 7px;
+    margin-left: 12px;
+    box-shadow: var(--shadow1);
+    background: var(--bgcolor);
+    cursor: pointer;
+   
+}
+.recentpost .rcp:hover{
+    box-shadow:var(--shadow1hover);
+}
+.recentpost .rcpcover img{
+width: 100%;
+height: auto;
+}
+
+.recentpost .rcp h3{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 10px;
+    background: var(--bgcolor);
+    width: 100%;
+    padding-left: 3px;
+}
+.recentpost .rcp h3 a{
+    text-decoration: none;
+    color: var(--blackwhite);
+}
+.rcp:hover .rcph3{
+    display: block;
+    transition: all .5s;
+}
+@media screen and (max-width: 800px){
+    article{
+        width:100%;
+    }
+    
+    aside{
+        width:100%;
+    }
+    .nav-bar1{
+    display:none;
+    
+    }
+    .sideMenu{
+        top:unset;
+    }
+   .footerTop .right{
+        width:100%;}
+        .footerTop .left,.footerup .left,.footerup .right{
+            width:100%;} 
+            .nav-bar2 .left form{
+                display: none;
+            }
+            .nav-bar2{
+                top:0;
+        
+            }
 
 
+    
+    }
+    .sidebox .block li a{
+        display: block;
+        padding: 10px;
+        background: transparent;
+        text-align: center;
+        box-shadow: var(--shadow1);
+        text-decoration: none;
+        margin-bottom: 10px;
+        color: var(--blackwhite);
+        border-radius: 5px;
+        transition: all .5s;
+   
+    }
+    .sidebox .inlineblock li a:hover{
+        box-shadow: var(--shadow1hover);
+    }
+    
+    .sidebox .inlineblock li{
+        display: inline-block;
+    }
+    .sidebox .inlineblock li a{
+    padding: 6px;
+    background: transparent;
+    text-align: center;
+    box-shadow: var(--shadow1);
+    text-decoration: none;
+    margin: 6px;
+    color: var(--blackwhite);
+    border-radius: 5px;
+}
 
+ 
+   .customodediv .removeall{
+       padding: 6px;
+       background: transparent;
+       position: absolute;
+       right: 0px;
+       bottom: 0px;
+       outline: none;
+       border:1px solid var(--main-bgcolor);
+       cursor: pointer;
+       border-radius:5px;
+   }
+   
+   .customodediv .defaultall{
+    padding: 6px;
+    background: transparent;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius:5px;
+    border:1px solid var(--main-bgcolor);
+  
+}
+.customodediv .resetall{
+    padding: 6px;
+    background: transparent;
+    position: absolute;
+    left: 86px;
+    bottom: 0px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius:5px;
+    border:1px solid var(--main-bgcolor);
+  
+}
+
+
+.customodediv input[type="color"] {
+    width: 66px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+   cursor: pointer;
+}

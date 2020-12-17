@@ -67,8 +67,32 @@ min-height: 100vh;
     <div class="modebtn">
 
         <input class="buttoninput" type="checkbox"/>
-
+        <input class="buttoninput" type="checkbox"/>
+        <input class="buttoninput" type="checkbox"/>
+        <input class="buttoninput" type="checkbox"/>
+        <input class="buttoninput" type="checkbox"/>
     </div>
     
+
+
+    <script>
+
+var darkTheme = document.querySelectorAll('.buttoninput')[0];
+var mode = window.localStorage.getItem('notify');
+
+if(mode) document.documentElement.setAttribute('notify', mode);
+  darkTheme.checked = mode == 'active' ? true : false;
+  darkTheme.addEventListener('change', function () {
+  if(this.checked){
+    document.documentElement.setAttribute('notify', 'active');
+    window.localStorage.setItem('notify', 'active');
+  } else {
+    document.documentElement.setAttribute('notify', 'off');
+    window.localStorage.setItem('notify', 'off');
+  }
+});
+
+
+    </script>
 </body>
 </html>

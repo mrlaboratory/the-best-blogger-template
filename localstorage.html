@@ -1,46 +1,23 @@
-<!DOCTYPE html>
 <html>
 <head>
-<title>Local storage</title>
 </head>
 <body>
-<button onclick="add()">Add</button>
-<button onclick="remove()">Remove</button>
-<button onclick="nonee()">None</button>
-<button onclick="clearr()">Clear</button>
-<button onclick="showss()">show name</button>
+<input class="seconds" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label  for="vehicle1"> I have a bike</label><br>
+<input  class="seconds"  type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2"> I have a car</label><br>
 
-<h2 id="mr">000</h2>
 <script>
-
-function add(){
-    localStorage.setItem("name", "Mijan");
-}
-function remove(){
-    localStorage.removeItem("name", "none");
-}
-function clearr(){
-    localStorage.clearr()
-}
-function showss(){
-    document.getElementById("mr").innerHTML = localStorage.getItem("name");
-}
-function nonee(){
-    localStorage.removeItem("name");
+var radios = document.getElementsByTagName("input"); // list of radio buttons
+var val = localStorage.getItem('input'); // local storage value
+for(var i=0;i<radios.length;i++){
+  if(radios[i].value == val){
+      radios[i].checked = true; // marking the required radio as checked
+  }
 }
 
-localStorage.setItem('key', 'value')
-
-const form = document.querySelector('form')
-const ul = document.querySelector('ul')
-const button = document.querySelector('button')
-const input = document.getElementById('item')
-
-// setItem()
-// getItem()
-// removeItem()
-// clear()	
-// https://www.taniarascia.com/how-to-use-local-storage-with-javascript/	
+localStorage.setItem("mrNotification", "active");
+document.getElementById("result").innerHTML=localStorage.getItem("mrNotification");
 
 </script>
 </body>

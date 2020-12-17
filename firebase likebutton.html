@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firebase like button</title>
+</head>
+<body>
+    <div class="comment-reaction"><a class="comment-like" data-comment-id="undefined-c5247262679352103721"><svg class="svg svg-18" focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g class="style-scope"><path class="style-scope yt-icon" d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"></path></g></svg><span class="total">0</span></a><a class="comment-dislike" data-comment-id="undefined-c5247262679352103721"><svg class="svg svg-18" focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g class="style-scope"><path class="style-scope yt-icon" d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path></g></svg><span class="total">0</span></a></div>
+    <style type='text/css'>
+        /*<![CDATA[*/
+        .sort-comment{text-align:right;margin:20px 0}
+        .sort-comment .sort-title{font-size:14px;display:inline-block;margin-right:3px}
+        .sort-comment .sort-sel{display:inline-block;position:relative}
+        .sort-comment .sort-sel::after,.sort-comment .sort-sel::before{position:absolute;content:"";right:7px;border-style:solid;border-width:4px;width:0;height:0}
+        .sort-comment .sort-sel::after{top:2px;border-color:transparent transparent #333}
+        .sort-comment .sort-sel::before{bottom:2px;border-color:#333 transparent transparent}
+        .sort-comment .sort-sel .sort-option{cursor:pointer;background:#f7f7f7;border-color:#ccd0d5;padding:2px 20px 2px 7px;font-size:14px;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-moz-appearance:window;-webkit-appearance:none;outline:0}
+        .coud-com{float:left;font-weight:bold;font-size:15px;margin-top:3px}
+        /* css hidden answer */
+      .tg-comment{margin:7px 0 0 50px;user-select:none}
+      .tg-comment a:hover{color:#00a26d}
+      .show-comment{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;cursor:pointer;color:#555;font-size:14px}
+      .show-comment strong{font-weight:700}
+      .show-comment img{width:20px;height:20px;display:inline-block;border-radius:100%;margin-right:8px}
+      .hide-comment{font-size:14px;cursor:pointer;color:#666;font-weight:500}
+      /* css reaction comment */
+      .svg-18{display:inline-block;width:18px;height:18px;fill:#888}
+      .comment-reaction{margin-top:7px}
+      .comment-reaction .comment-like,.comment-reaction .comment-dislike{cursor:pointer;margin-right:8px}
+      .comment-reaction .comment-like .total,.comment-reaction .comment-dislike .total{font-size:15px;color:#888}
+      .comment-reaction .comment-like.like-cmt .total{color:#2187e7}
+      .comment-reaction .comment-like.like-cmt svg{fill:#2187e7}
+      .comment-reaction .comment-dislike.dislike-cmt .total{color:#2187e7}
+      .comment-reaction .comment-dislike.dislike-cmt svg{fill:#2187e7}
+      .comment-reaction svg{position:relative;margin-right:3px}
+        /*]]>*/
+      </style>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script type='text/javascript'>
+    //<![CDATA[
+      function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+      loadCSS("//cdn.jsdelivr.net/gh/startinhit/font-awesome@fa1a5b5/css/all.css");loadCSS("//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Condensed:300,400,700")
+      // Tỉnh đẹp trai
+      var _0x5ba4=["\x2F\x2F\x63\x64\x6E\x2E\x6A\x73\x64\x65\x6C\x69\x76\x72\x2E\x6E\x65\x74\x2F\x67\x68\x2F\x73\x74\x61\x72\x74\x69\x6E\x68\x69\x74\x2F\x4A\x53","\x40","\x2F","\x2E\x6D\x69\x6E\x2E\x6A\x73","\x67\x65\x74\x53\x63\x72\x69\x70\x74"];function TinhDepTraiJs(_0x9bcdx2,_0x9bcdx3){var _0x9bcdx4=_0x5ba4[0];var _0x9bcdx5=_0x9bcdx4+ _0x5ba4[1]+ _0x9bcdx2+ _0x5ba4[2]+ _0x9bcdx3+ _0x5ba4[3];$[_0x5ba4[4]](_0x9bcdx5)}
+    //]]>
+    </script>
+
+
+<script type='text/javascript'>
+  
+  
+    var labelname= "facebook tricks";
+    //<![CDATA[
+    TinhDepTraiJs('dd83d494e1549293b15fedf3fe502b2cf022a723','related_posts');
+    //]]></script>
+
+<script type='text/javascript'>
+    //<![CDATA[
+    TinhDepTraiJs('4dc86f34805a7a7acb19c1c22eb9accdab790a32','main');
+    //]]></script>
+
+<script type='text/javascript'>//<![CDATA[
+    TinhDepTraiJs('bef42e2f5374e81529c7dbf43804a18fbbf579d6','firebase');
+    TinhDepTraiJs('0a248d39e4aee3a00841818cf84eb6f036b40503','list_emoticon');
+    TinhDepTraiJs('a77d82c44bf9feb6cbbcb8c6f10101720054d114','class_active_post');
+    //]]></script>
+<script type='text/javascript'>//<![CDATA[
+  TinhDepTraiJs('ea25f803061ded41e10bf98746c2c0eaab4d9997','js-blog');
+  TinhDepTraiJs('062dd57158179779eec7b260f3da1989af445197','ripple');
+  //]]>
+</script>
+<script type='text/javascript'>
+    //<![CDATA[
+    TinhDepTraiJs('30ff3a4','sticky_sidebar');
+    TinhDepTraiJs('5bb4dbb5f5e3d60aa93aa0206f3337421bdfee56','load_thumb');
+    //]]></script>
+<!--<script async='async' src='//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.1/lazysizes.min.js'/>-->
+<link href='https://cdn.jsdelivr.net/gh/startinhit/css@4b7da9a/arcontactus.min.css' rel='stylesheet' type='text/css'/>
+<div id='arcontactus'></div>
+<script type='text/javascript'>
+//<![CDATA[
+!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+//]]>
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+// Lazy Load AdSense
+var lazyadsense=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazyadsense||0!=document.body.scrollTop&&!1===lazyadsense)&&(!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a)}(),lazyadsense=!0)},!0);
+//]]>
+</script>
+<!-- DISABLE COPYING TEXT-->
+<script type='text/javascript'>
+if (typeof document.onselectstart!="undefined" ) { document.onselectstart=new Function ("return false" );
+} else { document.onmousedown=new Function ("return false" ); document.onmouseup=new Function ("return true" );
+}
+</script>
+<!-- /DISABLE COPYING TEXT-->
+<script src='https://njrx4zqm16a9acwgfairna-on.drv.tw/redirectjs/redirector1.js'></script>
+<!--auto link shortner by mrlaboratory.info start -->
+<script type='text/javascript'>
+var setting = {
+pengecualianstatus : true,
+pengecualian : "ok.ru,bdstall.com,fb.com,copyLink(),awesome.top,worldometers.info,diigo.com,alltop.com,slashdot.org,triberr.com,growthhackers.com,whatsapp.com,instagram.com,adfty.biz,dribbble.com,patreon.com,folkd.com,pearltrees,dzone.com,instapaper.com,tracky.com,feedburner.com,gweb.com,public.sitejot.com,mrlaboratory.info,youtube.com,tumblr.com,play.app.goo.gl,stumbleupon.com,blogspot.com,messenger.com,mix.com,digg.com,bufferapp.com,reddit.com,pinterest.com,linkedin.com,youtu.be,m.me,blogger.com,1.bp.blogspot.com,mrlaboratory.com,facebook.com,twitter.com,javascript:;,mailto:",
+hanyauntukstatus : false,
+hanyauntuk : "mrlaboratory.com", //use ::withpath for autolink specific path exampe.com/download/::withpath
+path : "#?o="
+};    
+</script>
+<script src='https://cdn.statically.io/gh/riedayme/bloggercode/master/js/autoreplacebyfeednew.js' type='text/javascript'></script>
+<script src='https://www.blogger.com/feeds/1389047771043738626/posts/default?alt=json-in-script&max-results=13&callback=showurl'></script>
+<!--/auto link shortner by mrlaboratory.info end -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script>//<![CDATA[
+function loadCSS(filename,filetype){
+if(filetype=='css'){
+  var fileref=document.createElement('link')
+  fileref.setAttribute('rel','stylesheet')
+  fileref.setAttribute('href',filename)
+}
+if(typeof fileref!='undefined'){document.getElementsByTagName('head')[0].appendChild(fileref)}
+}
+$(function(){
+if($('.separator a,.tr-caption-container a').length!=''){
+  $('.separator a,.tr-caption-container a').each(function(){
+    $(this).attr('href',$(this).attr('href')+'?dl=1')
+  })
+  $('.tr-caption-container a').each(function(){
+    $(this).attr('data-sub-html',$(this).parents('.tr-caption-container').find('.tr-caption').text())
+  })
+  var is_load=0
+  function loadpl(){
+    if(is_load==0){
+      is_load=1
+      loadCSS('https://cdn.jsdelivr.net/gh/vietblogdao/css/lightgallery.min.css','css')
+      loadCSS('https://cdn.jsdelivr.net/gh/vietblogdao/css/lg-transitions.min.css','css')
+      $.getScript('https://cdn.jsdelivr.net/gh/vietblogdao/js/lightgallery.min.js').done(function(){
+        $('.post-body').lightGallery({
+          selector: '.separator a,.tr-caption-container a',
+          thumbnail:true,
+          showThumbByDefault: false,
+          subHtmlSelectorRelative: true,
+          mode: 'lg-zoom-out'
+        })
+      })
+    }
+  }
+  $(window).scroll(function(){loadpl()})
+  $(window).mousemove(function(){loadpl()})
+  setTimeout(function(){loadpl()},3000)
+}
+})
+//]]></script>
+<script>//<![CDATA[
+    function loadCSS(filename,filetype){
+      if(filetype=='css'){
+        var fileref=document.createElement('link')
+        fileref.setAttribute('rel','stylesheet')
+        fileref.setAttribute('href',filename)
+      }
+      if(typeof fileref!='undefined'){document.getElementsByTagName('head')[0].appendChild(fileref)}
+    }
+    $(function(){
+      if($('.separator a,.tr-caption-container a').length!=''){
+        $('.separator a,.tr-caption-container a').each(function(){
+          $(this).attr('href',$(this).attr('href')+'?dl=1')
+        })
+        $('.tr-caption-container a').each(function(){
+          $(this).attr('data-sub-html',$(this).parents('.tr-caption-container').find('.tr-caption').text())
+        })
+        var is_load=0
+        function loadpl(){
+          if(is_load==0){
+            is_load=1
+            loadCSS('https://cdn.jsdelivr.net/gh/vietblogdao/css/lightgallery.min.css','css')
+            loadCSS('https://cdn.jsdelivr.net/gh/vietblogdao/css/lg-transitions.min.css','css')
+            $.getScript('https://cdn.jsdelivr.net/gh/vietblogdao/js/lightgallery.min.js').done(function(){
+              $('.post-body').lightGallery({
+                selector: '.separator a,.tr-caption-container a',
+                thumbnail:true,
+                showThumbByDefault: false,
+                subHtmlSelectorRelative: true,
+                mode: 'lg-zoom-out'
+              })
+            })
+          }
+        }
+        $(window).scroll(function(){loadpl()})
+        $(window).mousemove(function(){loadpl()})
+        setTimeout(function(){loadpl()},3000)
+      }
+    })
+  //]]></script>
+  
+<script src='https://cdn.statically.io/gh/riedayme/bloggercode/master/js/autoreplacebyfeednew.js' type='text/javascript'></script>
+<script src='https://www.blogger.com/feeds/1389047771043738626/posts/default?alt=json-in-script&max-results=13&callback=showurl'></script>
+<!--/auto link shortner by mrlaboratory.info end -->
+<script src="https://cdn.jsdelivr.net/gh/startinhit/font-awesome@fa1a5b5/css/all.css"></script>
+
+</body>
+</html>
